@@ -46,7 +46,7 @@ function renderFullStyle() {
 
 			fs.writeFile('dist/app.full.css', result.css, (err) => {
 				if (err) throw err;
-				console.log('Grid has been saved!');
+				console.log('Full has been saved!');
 			});
 		}
 	);
