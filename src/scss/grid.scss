@@ -1,0 +1,21 @@
+// Load custom-output & setting tools
+@import '../node_modules/henris/src/scss/custom-output.scss';
+
+// Define output settings for project
+$output: set-output(css, true);
+$output: set-output(debug, false);
+$output: set-output(components, false);
+$output: set-output(color, false);
+$output: set-output(content, false);
+$output: set-output(ease, false);
+$output: set-output(helpers, false);
+$output: set-output(icon, false);
+$output: set-output(print, false);
+$output: set-output(section, false);
+$output: set-output(spacing, false);
+$output: set-output(typography, false);
+$output: set-output(grid, true);
+
+// Output the whole framework
+@import '../node_modules/henris/index.scss';
+

@@ -4,6 +4,7 @@
 
 // Define output settings for project
 $output: set-output(css, true);
+$output: set-output(grid, false);
 
 // Output the whole framework
 @import '../node_modules/henris/index.scss';
