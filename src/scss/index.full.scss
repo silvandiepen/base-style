@@ -1,9 +1,11 @@
+@import '../node_modules/silicons/index.scss';
 // Basics
 @import 'tools/pre';
 @import 'typography/embed';
 
 // Define output settings for project
 $output: set-output(css, true);
+$output: set-output(form, true);
 $output: set-output(full, true);
 
 // Output the whole framework

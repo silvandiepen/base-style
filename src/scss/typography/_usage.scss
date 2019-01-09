@@ -13,9 +13,14 @@ p {
 }
 
 h1 {
-	font-weight: normal;
+	font-weight: bold;
 	font-size: grid(1);
 	line-height: 1;
+	text-align: center;
+	@media #{$small-only}{
+		text-align: left;
+	}
+	
 	@include min-(font-size, 1, 32);
 	@include max-(font-size, 1, 100);
 }

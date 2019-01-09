@@ -1510,3 +1510,13 @@ p + p {
 p + blockquote {
   margin-top: 1.5rem;
 }
+
+.container {
+  margin: auto;
+  width: 100%;
+  max-width: 960px;
+}
+
+.content {
+  padding: 4.1666666667vw;
+}

@@ -29,8 +29,10 @@
     "henris": "^0.5.1",
     "postcss": "^7.0.8",
     "sass": "^1.15.3",
+    "silicons": "^0.1.5",
     "stylelint": "^9.9.0",
     "stylelint-config-rational-order": "0.0.2",
     "stylelint-order": "^2.0.0"
-  }
+  },
+  "dependencies": {}
 }

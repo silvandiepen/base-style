@@ -1,0 +1,46 @@
+@include silicon-search();
+
+.search{
+	padding: grid(1); 
+}
+.input-search {
+	display: flex;
+	position: relative;
+	[type='search'] {
+		width: 100%;
+		font-size: 1rem;
+		padding: 1em 2em;
+		line-height: 1em;
+		border: 1px solid color(Black, 0.25);
+		border-radius: 1.75rem;
+		transition: all .3s;
+		&:focus {
+			outline: none;
+			border-color: color(Blue, 0.25);
+			box-shadow: 0 0 1rem 0 color(Blue, 0.25);
+			& + button{
+				color: color(Blue);
+			}
+		}
+		&::placeholder{
+			color: color(Black,.25);
+		}
+		& + button {
+			background: none;
+			border: none;
+			color: color(Black,.5);
+			font-size: 15px;
+			position: absolute;
+			right: 0;
+			--stroke: 0.075em;
+			padding: 1.25em;
+		}
+	}
+}
+
+.switch{
+	padding: 1rem; 
+	display: flex;
+	justify-content: center; 
+	align-items: center; 
+}

@@ -1,0 +1,15 @@
+.container{
+	margin: auto; 
+	width: 100%; 
+	max-width: 960px;
+}
+.content{
+	padding: grid(1);
+	@include min-('padding',1,60);
+	
+	.row{ 
+		& + .row{
+			margin-top: 2rem;
+		}
+	}
+}
