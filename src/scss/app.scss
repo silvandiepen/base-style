@@ -1,0 +1,13 @@
+// Basics
+@import 'tools/pre';
+@import 'typography/embed';
+
+// Define output settings for project
+$output: set-output(css, true);
+
+// Output the whole framework
+@import '../node_modules/henris/index.scss';
+@import 'tools/post';
+// Theme
+@import 'typography/index';
+@import 'components/index';

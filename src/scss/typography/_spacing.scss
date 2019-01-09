@@ -1,0 +1,18 @@
+h1 + p {
+	margin-top: grid(1);
+}
+
+h2 {
+	& + p {
+		margin-top: 2rem;
+	}
+}
+
+p {
+	& + p {
+		margin-top: 1rem;
+	}
+	& + blockquote {
+		margin-top: 1.5rem;
+	}
+}

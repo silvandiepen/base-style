@@ -1,0 +1,10 @@
+@if output("section") {
+	section {
+		&.basic {
+			padding: grid(2) 0;
+			@media #{$small-only} {
+				padding: 2rem;
+			}
+		}
+	}
+}

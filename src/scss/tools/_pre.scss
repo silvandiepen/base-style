@@ -1,0 +1,16 @@
+// Load custom-output & setting tools
+@import '../node_modules/henris/src/scss/custom-output.scss';
+
+
+// Add custom project colors
+@import '../color/index';
+
+// Add extra media queries
+$xxlarge-down: 'screen and (max-width: 1920px)';
+$xxlarge-up: 'screen and (min-width: 1920px)';
+$xxxlarge-down: 'screen and (max-width: 2560px)';
+$xxxlarge-up: 'screen and (min-width: 2560px)';
+
+// Define font variables
+$primary-font-family: 'Helvetica', serif;
+$secondary-font-family: 'Times New Roman', sans-serif;

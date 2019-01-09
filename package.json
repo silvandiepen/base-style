@@ -1,0 +1,36 @@
+{
+  "name": "base-style",
+  "version": "0.0.1",
+  "description": "Basic styling css from projects",
+  "main": "index.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node script/sass.js",
+    "dev": "sass src/scss/app.scss dist/app.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silvandiepen/base-style.git"
+  },
+  "keywords": [
+    "base",
+    "style",
+    "css"
+  ],
+  "author": "Sil van Diepen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/silvandiepen/base-style/issues"
+  },
+  "homepage": "https://github.com/silvandiepen/base-style#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.4.4",
+    "fibers": "^3.1.1",
+    "henris": "^0.5.1",
+    "postcss": "^7.0.8",
+    "sass": "^1.15.3",
+    "stylelint": "^9.9.0",
+    "stylelint-config-rational-order": "0.0.2",
+    "stylelint-order": "^2.0.0"
+  }
+}
