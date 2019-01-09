@@ -5,7 +5,7 @@ var fs = require('fs');
 function renderBaseStyle() {
 	sass.render(
 		{
-			file: 'src/scss/app.scss',
+			file: 'src/scss/index.scss',
 			fiber: Fiber
 		},
 		function(err, result) {
@@ -22,7 +22,7 @@ function renderBaseStyle() {
 function renderGridStyle() {
 	sass.render(
 		{
-			file: 'src/scss/grid.scss',
+			file: 'src/scss/index.grid.scss',
 			fiber: Fiber
 		},
 		function(err, result) {
@@ -38,7 +38,7 @@ function renderGridStyle() {
 function renderFullStyle() {
 	sass.render(
 		{
-			file: 'src/scss/grid.scss',
+			file: 'src/scss/index.full.scss',
 			fiber: Fiber
 		},
 		function(err, result) {
