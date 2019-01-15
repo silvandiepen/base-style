@@ -1,4 +1,3395 @@
 @charset "UTF-8";
+.silicon-adjust-color {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 50%;
+  background-image: linear-gradient(to right, transparent 50%, currentColor 50%);
+}
+
+.silicon-archive {
+  position: relative;
+  display: inline-block;
+  width: 0.75em;
+  height: 0.55em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top: none;
+  transform: translateY(0.2em);
+}
+.silicon-archive::before, .silicon-archive::after {
+  content: "";
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  transform: translateX(-50%);
+}
+.silicon-archive::before {
+  bottom: 100%;
+  left: 50%;
+  width: 1em;
+  height: calc(var(--stroke, 0.1em) * 3);
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+}
+.silicon-archive::after {
+  bottom: calc(100% - (var(--stroke, 0.1em) * 1));
+  left: 50%;
+  width: 0.2em;
+  height: calc(var(--stroke, 0.1em) / 2);
+  background-color: currentColor;
+}
+
+.silicon-arrow-basic-down {
+  position: relative;
+  display: block;
+  width: 1em;
+  height: var(--stroke, 0.1em);
+  /* background  */
+  background-color: currentColor;
+}
+.silicon-arrow-basic-down::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--stroke, 0.1em) * 0.5);
+  right: calc(var(--stroke, 0.1em) * -0.5);
+  display: block;
+  width: 0.3em;
+  height: 0.3em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-bottom: none;
+  border-left: none;
+  transform: rotate(45deg);
+  transform-origin: 100% 0;
+}
+
+.silicon-arrow-basic-down {
+  transform: rotate(90deg);
+}
+
+.silicon-arrow-basic-left {
+  position: relative;
+  display: block;
+  width: 1em;
+  height: var(--stroke, 0.1em);
+  /* background  */
+  background-color: currentColor;
+}
+.silicon-arrow-basic-left::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--stroke, 0.1em) * 0.5);
+  right: calc(var(--stroke, 0.1em) * -0.5);
+  display: block;
+  width: 0.3em;
+  height: 0.3em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-bottom: none;
+  border-left: none;
+  transform: rotate(45deg);
+  transform-origin: 100% 0;
+}
+
+.silicon-arrow-basic-left {
+  transform: rotate(180deg);
+}
+
+.silicon-arrow-basic-right {
+  position: relative;
+  display: block;
+  width: 1em;
+  height: var(--stroke, 0.1em);
+  /* background  */
+  background-color: currentColor;
+}
+.silicon-arrow-basic-right::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--stroke, 0.1em) * 0.5);
+  right: calc(var(--stroke, 0.1em) * -0.5);
+  display: block;
+  width: 0.3em;
+  height: 0.3em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-bottom: none;
+  border-left: none;
+  transform: rotate(45deg);
+  transform-origin: 100% 0;
+}
+
+.silicon-arrow-basic-up {
+  position: relative;
+  display: block;
+  width: 1em;
+  height: var(--stroke, 0.1em);
+  /* background  */
+  background-color: currentColor;
+}
+.silicon-arrow-basic-up::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--stroke, 0.1em) * 0.5);
+  right: calc(var(--stroke, 0.1em) * -0.5);
+  display: block;
+  width: 0.3em;
+  height: 0.3em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-bottom: none;
+  border-left: none;
+  transform: rotate(45deg);
+  transform-origin: 100% 0;
+}
+
+.silicon-arrow-basic-up {
+  transform: rotate(-90deg);
+}
+
+.silicon-arrow-filled-down {
+  position: relative;
+  display: block;
+  width: 1em;
+  height: var(--stroke, 0.1em);
+  background-color: currentColor;
+}
+.silicon-arrow-filled-down::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--stroke, 0.1em) * 0.5);
+  right: calc(var(--stroke, 0.1em) * -0.5);
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0.15em solid currentColor;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-radius: 0.05em;
+  transform: rotate(45deg);
+  transform-origin: 100% 0;
+}
+
+.silicon-arrow-filled-down {
+  transform: rotate(90deg);
+}
+
+.silicon-arrow-filled-left {
+  position: relative;
+  display: block;
+  width: 1em;
+  height: var(--stroke, 0.1em);
+  background-color: currentColor;
+}
+.silicon-arrow-filled-left::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--stroke, 0.1em) * 0.5);
+  right: calc(var(--stroke, 0.1em) * -0.5);
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0.15em solid currentColor;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-radius: 0.05em;
+  transform: rotate(45deg);
+  transform-origin: 100% 0;
+}
+
+.silicon-arrow-filled-left {
+  transform: rotate(180deg);
+}
+
+.silicon-arrow-filled-right {
+  position: relative;
+  display: block;
+  width: 1em;
+  height: var(--stroke, 0.1em);
+  background-color: currentColor;
+}
+.silicon-arrow-filled-right::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--stroke, 0.1em) * 0.5);
+  right: calc(var(--stroke, 0.1em) * -0.5);
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0.15em solid currentColor;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-radius: 0.05em;
+  transform: rotate(45deg);
+  transform-origin: 100% 0;
+}
+
+.silicon-arrow-filled-up {
+  position: relative;
+  display: block;
+  width: 1em;
+  height: var(--stroke, 0.1em);
+  background-color: currentColor;
+}
+.silicon-arrow-filled-up::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--stroke, 0.1em) * 0.5);
+  right: calc(var(--stroke, 0.1em) * -0.5);
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0.15em solid currentColor;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-radius: 0.05em;
+  transform: rotate(45deg);
+  transform-origin: 100% 0;
+}
+
+.silicon-arrow-filled-up {
+  transform: rotate(-90deg);
+}
+
+.silicon-arrow-right {
+  position: relative;
+  display: block;
+  width: 1em;
+  height: var(--stroke, 0.1em);
+  /* background  */
+  background-color: currentColor;
+}
+.silicon-arrow-right::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--stroke, 0.1em) * 0.5);
+  right: calc(var(--stroke, 0.1em) * -0.5);
+  display: block;
+  width: 0.3em;
+  height: 0.3em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-bottom: none;
+  border-left: none;
+  transform: rotate(45deg);
+  transform-origin: 100% 0;
+}
+
+.silicon-art-spraycan {
+  position: relative;
+  display: inline-block;
+  width: 0.6em;
+  height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top: none;
+  border-radius: 0 0 0.5em 0.5em/0 0 0.3em 0.3em;
+  background-image: radial-gradient(closest-side, transparent calc(100% - 0.05em), currentColor calc(100% - 0.05em), currentColor 100%, transparent), radial-gradient(closest-side, transparent calc(100% - 0.05em), currentColor calc(100% - 0.05em), currentColor 100%, transparent);
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom 0.75em center, bottom 0.1em center;
+  background-size: 0.9em 0.9em, 0.9em 0.9em;
+}
+.silicon-art-spraycan::before {
+  content: "";
+  position: absolute;
+  bottom: calc(100% - var(--stroke, 0.1em));
+  left: 50%;
+  display: block;
+  width: 0.6em;
+  height: 0.2em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top-width: calc(var(--stroke, 0.1em) * 0.5);
+  border-bottom: none;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+.silicon-art-spraycan::after {
+  content: "";
+  position: absolute;
+  bottom: calc(100% + 0.05em);
+  left: 50%;
+  display: block;
+  width: 0.3em;
+  height: 0.3em;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
+  border-radius: 0.4em/0.5em;
+  background-image: radial-gradient(closest-side, currentColor 100%, transparent);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 0.05em 0.05em;
+  transform: translateX(-50%);
+}
+
+.silicon-asterisk {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  background-image: linear-gradient(to bottom, currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% var(--stroke, 0.1em);
+}
+.silicon-asterisk::before, .silicon-asterisk::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 100%;
+  height: var(--stroke, 0.1em);
+  box-sizing: border-box;
+  background-color: currentColor;
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+.silicon-asterisk::after {
+  transform: translate(-50%, -50%) rotate(120deg);
+}
+
+.silicon-ball-basketball {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
+  background-image: linear-gradient(to right, currentColor, currentColor), linear-gradient(to right, currentColor, currentColor);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center, center, center;
+  background-size: calc(var(--stroke, 0.1em) / 2) 100%, 100% calc(var(--stroke, 0.1em) / 2);
+  transform: rotate(22.5deg);
+  overflow: hidden;
+}
+.silicon-ball-basketball::before, .silicon-ball-basketball::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 50%;
+}
+.silicon-ball-basketball::before {
+  left: 70%;
+}
+.silicon-ball-basketball::after {
+  right: 70%;
+}
+.silicon-ball-basketball.colored {
+  background-color: var(--color-orange, color(Orange));
+  color: var(--color-black, color(Black));
+}
+
+.silicon-ball-rugby {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 0.75em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 0.6em 0.6em 0.6em 0.6em/0.4em 0.4em 0.4em 0.4em;
+  background-image: linear-gradient(to right, currentColor, currentColor), linear-gradient(to right, currentColor, currentColor), linear-gradient(to right, currentColor, currentColor), linear-gradient(to right, currentColor, currentColor), linear-gradient(to right, currentColor, currentColor);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: center center, left 20% center, left 40% center, left 60% center, left 80% center;
+  background-size: 0.7em calc(var(--stroke, 0.1em) * 0.5), calc(var(--stroke, 0.1em) * 0.5) 0.2em, calc(var(--stroke, 0.1em) * 0.5) 0.2em, calc(var(--stroke, 0.1em) * 0.5) 0.2em, calc(var(--stroke, 0.1em) * 0.5) 0.2em;
+  transform: rotate(-45deg);
+}
+.silicon-ball-rugby.colored {
+  background-color: var(--color-orange, color(Orange));
+  color: var(--color-black, color(Black));
+}
+
+.silicon-ball-tennis {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
+  transform: rotate(22.5deg);
+  overflow: hidden;
+}
+.silicon-ball-tennis::before {
+  content: "";
+  position: absolute;
+  top: 0.2em;
+  left: 50%;
+  display: block;
+  width: 66.66%;
+  height: 100%;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 0.5em 0.5em 0 0;
+  transform: translateX(-50%);
+}
+.silicon-ball-tennis.colored {
+  background-color: var(--yellow,#f5c505);
+  color: var(--black,#101010);
+}
+
+.silicon-ball-volleyball {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
+  transform: rotate(-22.5deg);
+  overflow: hidden;
+}
+.silicon-ball-volleyball::before {
+  content: "";
+  position: absolute;
+  top: 0.1em;
+  left: 50%;
+  display: block;
+  width: 75%;
+  height: 100%;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 0.5em 0.5em 0 0;
+  background-image: linear-gradient(to bottom, currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: calc(var(--stroke, 0.1em) * 0.5) 100%;
+  transform: translateX(-50%);
+}
+.silicon-ball-volleyball::after {
+  content: "";
+  position: absolute;
+  top: 0em;
+  left: 50%;
+  display: block;
+  width: 100%;
+  height: 25%;
+  box-sizing: border-box;
+  background-image: linear-gradient(45deg, transparent calc(50% - 0.025em), currentColor calc(50% - 0.025em), currentColor calc(50% + 0.025em), transparent calc(50% + 0.025em)), linear-gradient(-45deg, transparent calc(50% - 0.025em), currentColor calc(50% - 0.025em), currentColor calc(50% + 0.025em), transparent calc(50% + 0.025em));
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, top right;
+  background-size: 0.5em 0.5em, 0.5em 0.5em;
+  transform: translateX(-50%);
+}
+.silicon-ball-volleyball.colored {
+  background-color: var(--white,#ffffff);
+  color: var(--black,#101010);
+}
+.silicon-ball-volleyball.colored::before, .silicon-ball-volleyball.colored::after {
+  color: var(--gray,#7f7f7f);
+}
+
+.silicon-ban {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
+  /* background  */
+  background-image: linear-gradient(to right bottom, transparent calc(50% - (var(--stroke, 0.1em) * 0.5)), currentColor calc(50% - (var(--stroke, 0.1em) * 0.5)), currentColor calc(50% + (var(--stroke, 0.1em) * 0.5)), transparent calc(50% - (var(--stroke, 0.1em) * 0.5)));
+}
+
+.silicon-battery-25 {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 0.5em;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: calc(var(--stroke, 0.1em) * 1.5);
+}
+.silicon-battery-25::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  display: block;
+  width: 0.2em;
+  height: 0.25em;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 0 calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 0.5) 0;
+  transform: translateY(-50%);
+}
+.silicon-battery-25.colored {
+  background-color: var(--white,#ffffff);
+  color: black;
+}
+.silicon-battery-25.colored::before {
+  background-color: var(--white,#ffffff);
+}
+
+.silicon-battery-25::after {
+  content: "\8";
+  position: absolute;
+  top: calc(var(--stroke, 0.1em) / 2);
+  left: calc(var(--stroke, 0.1em) / 2);
+  display: block;
+  width: calc(25%);
+  height: calc(100% - var(--stroke, 0.1em));
+  border-radius: calc(var(--stroke, 0.1em) / 2);
+  background-color: currentColor;
+}
+.silicon-battery-25.colored::after {
+  background-color: var(--red,#eb0f33);
+}
+
+.silicon-battery-50 {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 0.5em;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: calc(var(--stroke, 0.1em) * 1.5);
+}
+.silicon-battery-50::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  display: block;
+  width: 0.2em;
+  height: 0.25em;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 0 calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 0.5) 0;
+  transform: translateY(-50%);
+}
+.silicon-battery-50.colored {
+  background-color: var(--white,#ffffff);
+  color: black;
+}
+.silicon-battery-50.colored::before {
+  background-color: var(--white,#ffffff);
+}
+
+.silicon-battery-50::after {
+  content: "\8";
+  position: absolute;
+  top: calc(var(--stroke, 0.1em) / 2);
+  left: calc(var(--stroke, 0.1em) / 2);
+  display: block;
+  width: calc(50%);
+  height: calc(100% - var(--stroke, 0.1em));
+  border-radius: calc(var(--stroke, 0.1em) / 2);
+  background-color: currentColor;
+}
+.silicon-battery-50.colored::after {
+  background-color: var(--orange,#f6790b);
+}
+
+.silicon-battery-75 {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 0.5em;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: calc(var(--stroke, 0.1em) * 1.5);
+}
+.silicon-battery-75::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  display: block;
+  width: 0.2em;
+  height: 0.25em;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 0 calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 0.5) 0;
+  transform: translateY(-50%);
+}
+.silicon-battery-75.colored {
+  background-color: var(--white,#ffffff);
+  color: black;
+}
+.silicon-battery-75.colored::before {
+  background-color: var(--white,#ffffff);
+}
+
+.silicon-battery-75::after {
+  content: "\8";
+  position: absolute;
+  top: calc(var(--stroke, 0.1em) / 2);
+  left: calc(var(--stroke, 0.1em) / 2);
+  display: block;
+  width: calc(75%);
+  height: calc(100% - var(--stroke, 0.1em));
+  border-radius: calc(var(--stroke, 0.1em) / 2);
+  background-color: currentColor;
+}
+.silicon-battery-75.colored::after {
+  background-color: var(--green,#10c565);
+}
+
+.silicon-battery-empty {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 0.5em;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: calc(var(--stroke, 0.1em) * 1.5);
+}
+.silicon-battery-empty::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  display: block;
+  width: 0.2em;
+  height: 0.25em;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 0 calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 0.5) 0;
+  transform: translateY(-50%);
+}
+.silicon-battery-empty.colored {
+  background-color: var(--white,#ffffff);
+  color: black;
+}
+.silicon-battery-empty.colored::before {
+  background-color: var(--white,#ffffff);
+}
+
+.silicon-battery-full {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 0.5em;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: calc(var(--stroke, 0.1em) * 1.5);
+}
+.silicon-battery-full::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  display: block;
+  width: 0.2em;
+  height: 0.25em;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 0 calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 0.5) 0;
+  transform: translateY(-50%);
+}
+.silicon-battery-full.colored {
+  background-color: var(--white,#ffffff);
+  color: black;
+}
+.silicon-battery-full.colored::before {
+  background-color: var(--white,#ffffff);
+}
+
+.silicon-battery-full::after {
+  content: "";
+  position: absolute;
+  top: calc(var(--stroke, 0.1em) / 2);
+  left: calc(var(--stroke, 0.1em) / 2);
+  display: block;
+  width: calc(100% - var(--stroke, 0.1em));
+  height: calc(100% - var(--stroke, 0.1em));
+  border-radius: calc(var(--stroke, 0.1em) / 2);
+  background-color: currentColor;
+}
+.silicon-battery-full.colored::after {
+  background-color: var(--green,#10c565);
+}
+
+.silicon-bed {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 0.4em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: var(--stroke, 0.1em);
+}
+.silicon-bed::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  display: block;
+  width: 0.8em;
+  height: 0.4em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: calc(var(--stroke, 0.1em) * 2) calc(var(--stroke, 0.1em) * 2) 0 0;
+  background-image: linear-gradient(to right, currentColor, currentColor), linear-gradient(to right, currentColor, currentColor);
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom left 17.5%, bottom left 82.5%;
+  background-size: 0.2em 0.1em, 0.2em 0.1em;
+  transform: translateX(-50%);
+}
+
+.silicon-birdhouse {
+  position: relative;
+  display: inline-block;
+  width: 0.8em;
+  height: 0.65em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top: none;
+}
+.silicon-birdhouse::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  width: calc(0.8em - (var(--stroke, 0.1em) * 1.5));
+  height: calc(0.8em - (var(--stroke, 0.1em) * 1.5));
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-right: none;
+  border-bottom: none;
+  background-image: radial-gradient(closest-side, currentColor 100%, transparent);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: calc(var(--stroke, 0.1em) * 1.5) calc(var(--stroke, 0.1em) * 1.5);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.silicon-birdhouse.colored {
+  border-width: 0;
+  background-color: var(--brown,#aa834f);
+}
+.silicon-birdhouse.colored::before {
+  background-color: var(--brown,#aa834f);
+  background-image: radial-gradient(closest-side, var(--black,#101010) 100%, transparent);
+  color: var(--dark-brown,#87683f);
+}
+
+.silicon-book {
+  position: relative;
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 0.2em 0 0 0;
+  background-image: linear-gradient(to bottom, currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: var(--stroke, 0.1em) calc(100% - 					(var(--stroke, 0.1em) * 2));
+}
+.silicon-book::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: calc(var(--stroke, 0.1em) * -1);
+  display: block;
+  width: calc(100% + var(--stroke, 0.1em));
+  height: 0.4em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-right: none;
+  border-radius: 0.2em 0 0 0.2em;
+  background-image: radial-gradient(closest-side, transparent calc(100% - 0.05em), currentColor calc(100% - 0.05em), currentColor 100%, transparent);
+  background-repeat: no-repeat;
+  background-position: top 50% right -0.31em;
+  background-size: 0.4em 0.4em;
+  transform: translateY(-50%);
+}
+
+.silicon-bottle {
+  position: relative;
+  display: inline-block;
+  width: 0.45em;
+  height: 0.85em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 0.5em 0.5em 0 0;
+  background-image: linear-gradient(to bottom, currentColor, currentColor), linear-gradient(to bottom, currentColor, currentColor);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top 25% center, top 70% center;
+  background-size: 100% calc(var(--stroke, 0.1em) * 0.5), 100% calc(var(--stroke, 0.1em) * 0.5);
+}
+.silicon-bottle::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  display: block;
+  width: 0.25em;
+  height: 0.4em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-bottom: none;
+  transform: translateX(-50%);
+}
+
+.silicon-burger {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: var(--stroke, 0.1em);
+  box-sizing: border-box;
+  background-color: currentColor;
+}
+.silicon-burger::before, .silicon-burger::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: currentColor;
+}
+.silicon-burger::before {
+  top: 100%;
+  transform: translateY(calc(var(--stroke, 0.1em) * 2));
+}
+.silicon-burger::after {
+  bottom: 100%;
+  transform: translateY(calc(var(--stroke, 0.1em) * -2));
+}
+
+.silicon-code {
+  position: relative;
+  display: inline-block;
+  width: 1.25em;
+  height: 0.5em;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.silicon-code::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0.75em;
+  height: 0.75em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.silicon-copy {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 0.75em;
+  height: 1em;
+  box-sizing: border-box;
+}
+.silicon-copy::before, .silicon-copy::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0.75em;
+  height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+}
+.silicon-copy::before {
+  top: calc(var(--stroke, 0.1em) * -2);
+  left: calc(var(--stroke, 0.1em) * -2);
+  z-index: -1;
+  border-right: none;
+  border-bottom: none;
+}
+.silicon-copy::after {
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.silicon-copy.colored::before, .silicon-copy.colored::after {
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  background-color: white;
+  color: var(--black,#101010);
+}
+.silicon-copy.colored::before {
+  background-color: var(--white,#ffffff);
+  color: var(--gray,#7f7f7f);
+  /* opacity */
+  opacity: 0.5;
+}
+
+.silicon-cosmetics-lipstick {
+  position: relative;
+  display: inline-block;
+  width: 0.6em;
+  height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top-color: transparent;
+  border-radius: 0.2em 0.2em 0.5em 0.5em/0.2em 0.2em 0.3em 0.3em;
+  background-image: radial-gradient(closest-side, transparent calc(100% - 0.05em), currentColor calc(100% - 0.05em), currentColor 100%, transparent), radial-gradient(closest-side, transparent calc(100% - 0.05em), currentColor calc(100% - 0.05em), currentColor 100%, transparent);
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom 0.75em center, bottom 0.1em center;
+  background-size: 0.9em 0.9em, 0.9em 0.9em;
+}
+.silicon-cosmetics-lipstick::before {
+  content: "";
+  position: absolute;
+  bottom: calc(100% + calc(var(--stroke, 0.1em) * 0.5));
+  left: 50%;
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
+  border-bottom: none;
+  border-radius: 0.4em 0.4em 0 0/0.5em 0.5em 0 0;
+  background-image: radial-gradient(closest-side, transparent calc(100% - 0.05em), currentColor calc(100% - 0.05em), currentColor 100%, transparent);
+  background-repeat: no-repeat;
+  background-position: center -0.15em;
+  background-size: 0.3em 0.5em;
+  transform: translateX(-50%);
+}
+.silicon-cosmetics-lipstick.colored {
+  background-color: var(--gray,#7f7f7f);
+  background-image: radial-gradient(closest-side, var(--red,#eb0f33) calc(100% - 0.05em), var(--black,#101010) calc(100% - 0.05em), var(--black,#101010) 100%, var(--gray,#7f7f7f)), radial-gradient(closest-side, transparent calc(100% - 0.05em), var(--gray,#444444) calc(100% - 0.05em), var(--gray,#444444) 100%, transparent);
+  color: var(--gray,#444444);
+}
+.silicon-cosmetics-lipstick.colored::before {
+  background-color: var(--red,#eb0f33);
+  background-image: radial-gradient(closest-side, var(--light-red,#f4536d) 100%, transparent);
+  color: var(--dark-red,#bb0c29);
+}
+
+.silicon-creditcard {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 0.75em;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: var(--stroke, 0.1em);
+  background-image: linear-gradient(to right, currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: bottom 0.1em center;
+  background-size: 100% 0.2em;
+}
+
+.silicon-device-camera {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 0.75em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: var(--stroke, 0.1em);
+}
+.silicon-device-camera::before, .silicon-device-camera::after {
+  content: "";
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+}
+.silicon-device-camera::before {
+  top: 50%;
+  left: 50%;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.silicon-device-camera::after {
+  bottom: calc(100% + var(--stroke, 0.1em));
+  left: 50%;
+  width: 0.3em;
+  height: 0.1em;
+  border-radius: 0.1em 0.1em 0 0;
+  transform: translateX(-50%);
+}
+
+.silicon-device-laptop {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 0.6em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-bottom: 0;
+  border-radius: 0.1em 0.1em 0 0;
+}
+.silicon-device-laptop::before {
+  content: "";
+  position: absolute;
+  top: calc(100%);
+  left: 50%;
+  display: block;
+  width: 1.2em;
+  height: calc(var(--stroke, 0.1em) * 2);
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 0 0 0.2em 0.2em;
+  transform: translateX(-50%);
+}
+.silicon-device-laptop.colored {
+  background-color: var(--blue,#1eb3e0);
+  background-image: linear-gradient(-70deg, transparent 40%, var(--white-02, rgba(255, 255, 255, 0.2)) 40%, var(--white-02, rgba(255, 255, 255, 0.2)) 60%, transparent 60%);
+  color: var(--dark,#303030);
+}
+.silicon-device-laptop.colored::before {
+  background-color: var(--gray,#7f7f7f);
+}
+
+.silicon-device-phone {
+  position: relative;
+  display: inline-block;
+  width: 0.6em;
+  height: 1em;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 0.1em;
+}
+.silicon-device-phone::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  width: 0.2em;
+  height: 0.05em;
+  box-sizing: border-box;
+  border-radius: 0 0 0.05em 0.05em;
+  background-color: currentColor;
+  transform: translateX(-50%);
+}
+.silicon-device-phone.colored {
+  background-color: var(--green,#10c565);
+  background-image: linear-gradient(-70deg, transparent 40%, var(--white-02, rgba(255, 255, 255, 0.2)) 40%, var(--white-02, rgba(255, 255, 255, 0.2)) 60%, transparent 60%);
+  color: var(--dark,#303030);
+}
+
+.silicon-device-printer {
+  position: relative;
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+}
+.silicon-device-printer::before, .silicon-device-printer::after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+.silicon-device-printer::after {
+  bottom: calc(100% + (var(--stroke, 0.1em) * 2.5));
+  left: 50%;
+  display: block;
+  width: 0.5em;
+  height: 0.1em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-bottom: none;
+  transform: translateX(-50%);
+}
+.silicon-device-printer::before {
+  top: -0.25em;
+  left: 50%;
+  /* sisze */
+  display: block;
+  width: 1em;
+  height: 0.5em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: var(--stroke, 0.1em) var(--stroke, 0.1em) 0 0;
+  transform: translatex(-50%);
+  clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%, 74% 100%, 74% 50%, 26% 50%, 26% 100%);
+}
+.silicon-device-printer.colored, .silicon-device-printer.colored::after {
+  background-color: var(--white,#ffffff);
+  color: var(--gray,#7f7f7f);
+}
+.silicon-device-printer.colored::before {
+  background-color: var(--dark,#303030);
+  color: var(--black,#101010);
+}
+
+.silicon-device-screen {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 0.75em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 0.1em;
+}
+.silicon-device-screen::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  display: block;
+  width: 50%;
+  height: calc(var(--stroke, 0.1em) * 3);
+  box-sizing: border-box;
+  border-bottom: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  background-image: linear-gradient(to right, transparent calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% + var(--stroke, 0.1em) / 4), transparent calc(50% + var(--stroke, 0.1em) / 4));
+  transform: translateX(-50%);
+}
+.silicon-device-screen.colored {
+  background-color: var(--blue,#1eb3e0);
+  background-image: linear-gradient(-70deg, transparent 40%, var(--white-02, rgba(255, 255, 255, 0.2)) 40%, var(--white-02, rgba(255, 255, 255, 0.2)) 60%, transparent 60%);
+  color: var(--dark,#303030);
+}
+
+.silicon-device-tablet {
+  position: relative;
+  display: inline-block;
+  width: 0.6em;
+  height: 1em;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 0.1em;
+}
+.silicon-device-tablet::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  width: 0.2em;
+  height: 0.05em;
+  box-sizing: border-box;
+  border-radius: 0 0 0.05em 0.05em;
+  background-color: currentColor;
+  transform: translateX(-50%);
+}
+.silicon-device-tablet.colored {
+  background-color: var(--green,#10c565);
+  background-image: linear-gradient(-70deg, transparent 40%, var(--white-02, rgba(255, 255, 255, 0.2)) 40%, var(--white-02, rgba(255, 255, 255, 0.2)) 60%, transparent 60%);
+  color: var(--dark,#303030);
+}
+
+.silicon-device-tablet {
+  width: 1em;
+  height: 0.6em;
+}
+.silicon-device-tablet::before {
+  top: 50%;
+  left: 0;
+  width: 0.05em;
+  height: 0.2em;
+  border-radius: 0 0.05em 0.05em 0;
+  transform: translate(0, -50%);
+}
+
+.silicon-device-tv {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 0.75em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 0.2em;
+}
+.silicon-device-tv::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  display: block;
+  width: calc(var(--stroke, 0.1em) * 3);
+  height: calc(var(--stroke, 0.1em) * 3);
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-top: 0;
+  border-right: 0;
+  transform: translateX(-50%) translateY(calc(var(--stroke, 0.1em) * -1)) rotate(-45deg);
+}
+.silicon-device-tv .colored {
+  background-image: var(--purple,#7329b1);
+}
+
+.silicon-file-download {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 0.5em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top: 0;
+}
+.silicon-file-download::before, .silicon-file-download::after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+.silicon-file-download::before {
+  bottom: 75%;
+  left: 50%;
+  display: block;
+  width: calc(var(--stroke, 0.1em) / 2);
+  height: 0.5em;
+  background-color: currentColor;
+  transform: translateX(-50%);
+}
+.silicon-file-download::after {
+  bottom: calc(75% - var(--stroke, 0.1em) / 2);
+  left: 50%;
+  display: block;
+  width: 0.33em;
+  height: 0.33em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-top: none;
+  border-right: none;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+.silicon-file-download.colored {
+  color: var(--dark,#303030);
+}
+.silicon-file-download.colored::before, .silicon-file-download.colored::after {
+  color: var(--blue,#1eb3e0);
+}
+
+.silicon-file-export {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 0.75em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top: 0;
+  background-image: linear-gradient(to right, currentColor 33.33%, transparent 33.33%, transparent, 66.66%, currentColor 66.66%);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100% var(--stroke, 0.1em);
+}
+.silicon-file-export::before, .silicon-file-export::after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+.silicon-file-export::before {
+  bottom: 75%;
+  left: 50%;
+  display: block;
+  width: calc(var(--stroke, 0.1em) / 2);
+  height: 0.5em;
+  background-color: currentColor;
+  transform: translateX(-50%);
+}
+.silicon-file-export::after {
+  bottom: calc(75% + 0.5em + (var(--stroke, 0.1em) / 2));
+  left: 50%;
+  display: block;
+  width: 0.33em;
+  height: 0.33em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-top: none;
+  border-right: none;
+  transform: rotate(135deg);
+  transform-origin: 0 100%;
+}
+.silicon-file-export.colored {
+  color: var(--dark,#303030);
+}
+.silicon-file-export.colored::before, .silicon-file-export.colored::after {
+  color: var(--blue,#1eb3e0);
+}
+
+.silicon-file-import {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 0.75em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top: 0;
+  background-image: linear-gradient(to right, currentColor 33.33%, transparent 33.33%, transparent, 66.66%, currentColor 66.66%);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100% var(--stroke, 0.1em);
+}
+.silicon-file-import::before, .silicon-file-import::after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+.silicon-file-import::before {
+  bottom: 40%;
+  left: 50%;
+  display: block;
+  width: calc(var(--stroke, 0.1em) / 2);
+  height: 0.5em;
+  background-color: currentColor;
+  transform: translateX(-50%);
+}
+.silicon-file-import::after {
+  bottom: calc(40% - var(--stroke, 0.1em) / 2);
+  left: 50%;
+  display: block;
+  width: 0.33em;
+  height: 0.33em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-top: none;
+  border-right: none;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+.silicon-file-import.colored {
+  color: var(--dark,#303030);
+}
+.silicon-file-import.colored::before, .silicon-file-import.colored::after {
+  color: var(--green,#10c565);
+}
+
+.silicon-file-upload {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 0.5em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top: 0;
+}
+.silicon-file-upload::before, .silicon-file-upload::after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+.silicon-file-upload::before {
+  bottom: 75%;
+  left: 50%;
+  display: block;
+  width: calc(var(--stroke, 0.1em) / 2);
+  height: 0.5em;
+  background-color: currentColor;
+  transform: translateX(-50%);
+}
+.silicon-file-upload::after {
+  bottom: calc(75% + 0.5em + (var(--stroke, 0.1em) / 2));
+  left: 50%;
+  display: block;
+  width: 0.33em;
+  height: 0.33em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-top: none;
+  border-right: none;
+  transform: rotate(135deg);
+  transform-origin: 0 100%;
+}
+.silicon-file-upload.colored {
+  color: var(--dark,#303030);
+}
+.silicon-file-upload.colored::before, .silicon-file-upload.colored::after {
+  color: var(--green,#10c565);
+}
+
+.silicon-float {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
+  background-image: radial-gradient(closest-side, transparent calc(100% - var(--stroke, 0.1em)), currentColor calc(100% - var(--stroke, 0.1em)), currentColor 100%, transparent), linear-gradient(to bottom, currentColor 0.25em, transparent 0.25em, transparent 0.6em, currentColor 0.6em), linear-gradient(to right, currentColor 0.25em, transparent 0.25em, transparent 0.6em, currentColor 0.6em);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: center center, center center, center center;
+  background-size: 0.5em 0.5em, calc(var(--stroke, 0.1em) / 2) 100%, 100% calc(var(--stroke, 0.1em) / 2);
+  transform: rotate(45deg);
+}
+
+.silicon-glass-wine {
+  position: relative;
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 0 0 50% 50%;
+  background-image: linear-gradient(to bottom, currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% calc(var(--stroke, 0.1em) * 0.5);
+}
+.silicon-glass-wine::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: calc(var(--stroke, 0.1em) * -1);
+  display: block;
+  width: 0.5em;
+  height: 0.4em;
+  box-sizing: border-box;
+  border-bottom: var(--stroke, 0.1em) solid currentColor;
+  background-image: linear-gradient(to bottom, currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: var(--stroke, 0.1em) 100%;
+}
+
+.silicon-globe {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  width: 1em;
+  height: 0.8em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
+}
+.silicon-globe::before {
+  content: "";
+  width: 60%;
+  height: 100%;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 50%;
+  margin-top: calc(var(--stroke, 0.1em) * -0.5);
+}
+.silicon-globe::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, currentColor, currentColor), linear-gradient(to right, currentColor, currentColor);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center, center center;
+  background-size: calc(var(--stroke, 0.1em) / 2) 100%, 100% calc(var(--stroke, 0.1em) / 2);
+}
+.silicon-globe.colored {
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  background-color: var(--light-blue,#61caea);
+  background-image: radial-gradient(var(--green,#10c565) 50%, transparent 50%), radial-gradient(var(--green,#10c565) 50%, transparent 50%), radial-gradient(var(--green,#10c565) 50%, transparent 50%), radial-gradient(var(--white,#ffffff) 50%, transparent 50%), radial-gradient(var(--white,#ffffff) 50%, transparent 50%);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: center center, left -0.25em center, right -0.25em center, center top -0.15em, center bottom -0.15em;
+  background-size: 0.5em 0.5em, 0.5em 0.5em, 0.5em 0.5em, 0.75em 0.25em, 0.75em 0.25em;
+  color: var(--dark,#303030);
+}
+
+.silicon-go-down {
+  position: relative;
+  display: block;
+  width: 0.5em;
+  height: 1em;
+  overflow: hidden;
+}
+.silicon-go-down::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: block;
+  width: calc(0.5em - (var(--stroke, 0.1em) / 2));
+  height: calc(0.5em - (var(--stroke, 0.1em) / 2));
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-bottom: none;
+  border-left: none;
+  transform: rotate(45deg);
+  transform-origin: 100% 0;
+}
+
+.silicon-go-down {
+  transform: rotate(90deg);
+}
+
+.silicon-go-left {
+  position: relative;
+  display: block;
+  width: 0.5em;
+  height: 1em;
+  overflow: hidden;
+}
+.silicon-go-left::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: block;
+  width: calc(0.5em - (var(--stroke, 0.1em) / 2));
+  height: calc(0.5em - (var(--stroke, 0.1em) / 2));
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-bottom: none;
+  border-left: none;
+  transform: rotate(45deg);
+  transform-origin: 100% 0;
+}
+
+.silicon-go-left {
+  transform: rotate(-180deg);
+}
+
+.silicon-go-right {
+  position: relative;
+  display: block;
+  width: 0.5em;
+  height: 1em;
+  overflow: hidden;
+}
+.silicon-go-right::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: block;
+  width: calc(0.5em - (var(--stroke, 0.1em) / 2));
+  height: calc(0.5em - (var(--stroke, 0.1em) / 2));
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-bottom: none;
+  border-left: none;
+  transform: rotate(45deg);
+  transform-origin: 100% 0;
+}
+
+.silicon-go-up {
+  position: relative;
+  display: block;
+  width: 0.5em;
+  height: 1em;
+  overflow: hidden;
+}
+.silicon-go-up::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: block;
+  width: calc(0.5em - (var(--stroke, 0.1em) / 2));
+  height: calc(0.5em - (var(--stroke, 0.1em) / 2));
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-bottom: none;
+  border-left: none;
+  transform: rotate(45deg);
+  transform-origin: 100% 0;
+}
+
+.silicon-go-up {
+  transform: rotate(-90deg);
+}
+
+.silicon-home {
+  position: relative;
+  display: inline-block;
+  width: 0.9em;
+  height: 0.5em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top: none;
+  background-image: linear-gradient(to bottom, currentColor, currentColor), linear-gradient(to bottom, currentColor, currentColor), linear-gradient(to bottom, currentColor, currentColor), linear-gradient(to bottom, currentColor, currentColor), linear-gradient(to bottom, currentColor, currentColor);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: left 0.1em bottom, 0.35em 0.1em, 0.475em 0.1em, 0.35em 0.225em, 0.475em 0.225em;
+  background-size: 0.2em 0.3em, 0.1em 0.1em, 0.1em 0.1em, 0.1em 0.1em, 0.1em 0.1em;
+}
+.silicon-home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  width: calc(0.8em - (var(--stroke, 0.1em) * 1));
+  height: calc(0.8em - (var(--stroke, 0.1em) * 1));
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-right: none;
+  border-bottom: none;
+  background-image: radial-gradient(closest-side, currentColor 100%, transparent);
+  background-repeat: no-repeat;
+  background-position: 0.1em 0.1em;
+  background-size: calc(var(--stroke, 0.1em) * 1.5) calc(var(--stroke, 0.1em) * 1.5);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.silicon-label {
+  position: relative;
+  display: inline-block;
+  width: 0.5em;
+  height: 0.65em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top: none;
+  transform: rotate(-45deg);
+}
+.silicon-label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  width: calc(0.5em - (var(--stroke, 0.1em) * 1.5));
+  height: calc(0.5em - (var(--stroke, 0.1em) * 1.5));
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-right: none;
+  border-bottom: none;
+  border-radius: var(--stroke, 0.1em) 0 0 0;
+  background-image: radial-gradient(closest-side, currentColor 100%, transparent);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: var(--stroke, 0.1em) var(--stroke, 0.1em);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.silicon-link {
+  position: relative;
+  display: inline-block;
+  width: 0.5em;
+  height: calc(var(--stroke, 0.1em) / 2);
+  box-sizing: border-box;
+  background-color: currentColor;
+  transform: rotate(-45deg);
+}
+.silicon-link::before, .silicon-link::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 0.35em;
+  height: 0.2em;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: var(--stroke, 0.1em);
+  transform: translateY(-50%);
+}
+.silicon-link::before {
+  right: calc(100% - (var(--stroke, 0.1em) * 2));
+}
+.silicon-link::after {
+  left: calc(100% - (var(--stroke, 0.1em) * 2));
+}
+
+.silicon-loading-spinner {
+  position: relative;
+  width: calc(var(--stroke, 0.1em) * 2.5);
+  height: calc(var(--stroke, 0.1em) * 2.5);
+  box-shadow: 0 -0.4em, -0.28em -0.28em 0 -0.01em, -0.4em 0 0 -0.02em, -0.28em 0.28em 0 -0.03em, 0 0.4em 0 -0.04em, 0.28em 0.28em 0 -0.05em, 0.4em 0 0 -0.06em, 0.28em -0.28em 0 -0.07em;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.silicon-location {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50% 50% 0 50%;
+  transform: rotate(45deg);
+}
+.silicon-location::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  display: block;
+  width: calc(var(--stroke, 0.1em) * 2);
+  height: calc(var(--stroke, 0.1em) * 2);
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: currentColor;
+  transform: translate(50%, -50%);
+}
+.silicon-location.colored {
+  background-color: var(--red,#eb0f33);
+  color: var(--dark-red,#bb0c29);
+}
+.silicon-location.colored::after {
+  width: calc(var(--stroke, 0.1em) * 3);
+  height: calc(var(--stroke, 0.1em) * 3);
+  color: var(--black,#101010);
+}
+
+.silicon-lock-open {
+  position: relative;
+  display: inline-block;
+  width: 0.8em;
+  height: 0.5em;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
+  border-radius: 0 0 var(--stroke, 0.1em) var(--stroke, 0.1em);
+}
+.silicon-lock-open::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  display: block;
+  width: 0.6em;
+  height: 0.5em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-bottom: 0;
+  border-radius: 0.3em 0.3em 0 0;
+  transform: translateX(-50%);
+}
+
+.silicon-lock-open::before {
+  border-right-color: transparent;
+}
+
+.silicon-lock {
+  position: relative;
+  display: inline-block;
+  width: 0.8em;
+  height: 0.5em;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
+  border-radius: 0 0 var(--stroke, 0.1em) var(--stroke, 0.1em);
+}
+.silicon-lock::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  display: block;
+  width: 0.6em;
+  height: 0.5em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-bottom: 0;
+  border-radius: 0.3em 0.3em 0 0;
+  transform: translateX(-50%);
+}
+
+.silicon-mail {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 0.75em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: var(--stroke, 0.1em);
+  overflow: hidden;
+}
+.silicon-mail::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  display: block;
+  width: 0.6em;
+  height: 0.6em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: var(--stroke, 0.1em);
+  transform: translate(-50%, -50%) rotate(45deg);
+  transform-origin: 50% 50%;
+}
+.silicon-mail.colored {
+  background-color: var(--white,#ffffff);
+  color: var(--gray,#444444);
+}
+
+.silicon-map {
+  position: relative;
+  display: inline-block;
+  width: 0.33em;
+  height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-right-width: calc(var(--stroke, 0.1em) / 4);
+  border-left-width: calc(var(--stroke, 0.1em) / 4);
+  transform: skewY(-12deg);
+}
+.silicon-map::before, .silicon-map::after {
+  content: "";
+  position: absolute;
+  top: calc(var(--stroke, 0.1em) * -1);
+  display: block;
+  width: 0.33em;
+  height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+}
+.silicon-map::before {
+  left: calc(100% + (var(--stroke, 0.1em) / 4));
+  border-left-width: calc(var(--stroke, 0.1em) / 4);
+  border-radius: 0 var(--stroke, 0.1em) var(--stroke, 0.1em) 0;
+  transform: skewY(24deg);
+  transform-origin: 0 100%;
+}
+.silicon-map::after {
+  right: calc(100% + (var(--stroke, 0.1em) / 4));
+  border-right-width: calc(var(--stroke, 0.1em) / 4);
+  border-radius: var(--stroke, 0.1em) 0 0 var(--stroke, 0.1em);
+  transform: skewY(24deg);
+  transform-origin: 100% 0;
+}
+.silicon-map.colored, .silicon-map.colored::after, .silicon-map.colored::before {
+  background-color: var(--light-blue,#61caea);
+  background-image: radial-gradient(var(--green,#10c565) 40%, var(--beige,#cdb492) 50%, transparent 60%);
+  background-position: center center;
+  background-size: 1em 1em;
+  color: var(--blue,#1eb3e0);
+}
+.silicon-map.colored::before {
+  background-position: right center;
+}
+.silicon-map.colored::after {
+  background-position: left center;
+}
+
+.silicon-math-minus {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+}
+.silicon-math-minus::before, .silicon-math-minus::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 100%;
+  height: var(--stroke, 0.1em);
+  box-sizing: border-box;
+  background-color: currentColor;
+}
+.silicon-math-minus::before {
+  transform: translate(-50%, -50%);
+}
+.silicon-math-minus::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.silicon-math-plus {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+}
+.silicon-math-plus::before, .silicon-math-plus::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 100%;
+  height: var(--stroke, 0.1em);
+  box-sizing: border-box;
+  background-color: currentColor;
+  transform: translate(-50%, -50%);
+}
+
+.silicon-math-times {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+}
+.silicon-math-times::before, .silicon-math-times::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 100%;
+  height: var(--stroke, 0.1em);
+  box-sizing: border-box;
+  background-color: currentColor;
+  transform: translate(-50%, -50%);
+}
+
+.silicon-math-times {
+  transform: rotate(45deg);
+}
+.silicon-math-times::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.silicon-office-marker {
+  position: relative;
+  display: inline-block;
+  width: 0.6em;
+  height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top: none;
+  border-radius: 0 0 0.5em 0.5em/0 0 0.3em 0.3em;
+  background-image: radial-gradient(closest-side, transparent calc(100% - 0.05em), currentColor calc(100% - 0.05em), currentColor 100%, transparent);
+  background-repeat: no-repeat;
+  background-position: bottom 0.8em center;
+  background-size: 0.9em 0.9em;
+  transform: rotate(225deg);
+}
+.silicon-office-marker::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  display: block;
+  width: 0.6em;
+  height: 0.2em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top-width: calc(var(--stroke, 0.1em) * 0.5);
+  border-bottom: none;
+  border-radius: 0.2em 0.2em 0 0;
+  transform: translateX(-50%);
+}
+.silicon-office-marker::after {
+  content: "";
+  position: absolute;
+  bottom: calc(100% + 0.15em);
+  left: 50%;
+  display: block;
+  width: 0.3em;
+  height: 0.4em;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
+  border-bottom: none;
+  border-radius: 0.1em 0.1em 0 0;
+  background-image: radial-gradient(closest-side, currentColor 100%, transparent);
+  background-repeat: no-repeat;
+  background-position: bottom 0.1em center;
+  background-size: 0.5em 0.5em;
+  transform: translateX(-50%);
+}
+
+.silicon-office-paperclip {
+  --height: calc(var(--stroke, 0.1em) * 5.5);
+  position: relative;
+  display: inline-block;
+  width: 0.75em;
+  height: var(--height);
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-left: none;
+  border-radius: 0 0.3em 0.3em 0;
+  transform: rotate(-45deg);
+}
+.silicon-office-paperclip::before, .silicon-office-paperclip::after {
+  content: "";
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+}
+.silicon-office-paperclip::before {
+  top: calc(var(--stroke, 0.1em) * -1);
+  right: 100%;
+  width: 0.5em;
+  height: calc(var(--height) - (var(--stroke, 0.1em) * 1.5));
+  border-right: none;
+  border-radius: calc( 					var(--height) - (var(--stroke, 0.1em) * 1.5) / 2 				) 0 0 calc(var(--height) - (var(--stroke, 0.1em) * 1.5) / 2);
+}
+.silicon-office-paperclip::after {
+  bottom: calc(var(--stroke, 0.1em) / 2);
+  left: 0;
+  width: 0.5em;
+  height: calc(var(--height) - (var(--stroke, 0.1em) * 3));
+  border-left: none;
+  border-radius: 0 calc(var(--height) - (var(--stroke, 0.1em) * 3) / 2) calc(var(--height) - (var(--stroke, 0.1em) * 3) / 2) 0;
+}
+
+.silicon-office-pencil {
+  position: relative;
+  display: inline-block;
+  width: 0.6em;
+  height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top: none;
+  border-radius: 0 0 0.5em 0.5em/0 0 0.3em 0.3em;
+  background-image: linear-gradient(to bottom, currentColor, currentColor), linear-gradient(to bottom, currentColor, currentColor), radial-gradient(closest-side, transparent calc(100% - calc(var(--stroke, 0.1em) * 0.5)), currentColor calc(100% - calc(var(--stroke, 0.1em) * 0.5)), currentColor 100%, transparent), radial-gradient(closest-side, transparent calc(100% - calc(var(--stroke, 0.1em) * 0.5)), currentColor calc(100% - calc(var(--stroke, 0.1em) * 0.5)), currentColor 100%, transparent);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: 25% 0.1em, 75% 0.1em, bottom 0.75em center, bottom 0.2em center;
+  background-size: calc(var(--stroke, 0.1em) * 0.5) 0.55em, calc(var(--stroke, 0.1em) * 0.5) 0.55em, 0.8em 0.8em, 0.8em 0.8em;
+  transform: rotate(225deg);
+}
+.silicon-office-pencil::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  width: calc((0.575em - (var(--stroke, 0.1em) * 1.5)) * 1);
+  height: calc((0.575em - (var(--stroke, 0.1em) * 1.5)) * 1);
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) * 0.8) solid currentColor;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  background-image: radial-gradient(closest-side, currentColor 100%, transparent);
+  background-repeat: no-repeat;
+  background-position: -0.15em -0.15em;
+  background-size: 0.3em 0.3em;
+  transform: translate(-50%, -50%) scale(1, 1) rotate(45deg);
+}
+
+.silicon-office-scissors {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  background-image: radial-gradient(closest-side, transparent 50%, currentColor 50%, currentColor 100%, transparent), radial-gradient(closest-side, transparent 50%, currentColor 50%, currentColor 100%, transparent);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0.65em bottom, 0.15em bottom;
+  background-size: 0.2em 0.25em, 0.2em 0.25em;
+  transform: rotate(45deg);
+}
+.silicon-office-scissors::before, .silicon-office-scissors::after {
+  content: "";
+  position: absolute;
+  top: -0.05em;
+  display: block;
+  width: var(--stroke, 0.1em);
+  height: 1em;
+  background-color: currentColor;
+  transform-origin: 50% 50%;
+}
+.silicon-office-scissors::before {
+  right: 50%;
+  border-radius: 0.2em 0 0 120%;
+  transform: rotate(-22.5deg);
+}
+.silicon-office-scissors::after {
+  left: 50%;
+  border-radius: 0 0.2em 120% 0;
+  transform: rotate(22.5deg);
+}
+
+.silicon-paste {
+  position: relative;
+  display: inline-block;
+  width: 0.75em;
+  height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  background-image: linear-gradient(to bottom, transparent, transparent calc(50% - (var(--stroke, 0.1em) / 4)), currentColor calc(50% - (var(--stroke, 0.1em) / 4)), currentColor calc(50% + (var(--stroke, 0.1em) / 4)), transparent calc(50% + (var(--stroke, 0.1em) / 4)), transparent);
+  background-repeat: repeat-y;
+  background-position: center center;
+  background-size: 0.4em calc(var(--stroke, 0.1em) * 1.5);
+}
+.silicon-paste::before {
+  content: "";
+  position: absolute;
+  top: 0em;
+  left: 50%;
+  width: 0.3em;
+  height: 0.1em;
+  background-color: currentColor;
+  transform: translateX(-50%);
+}
+.silicon-paste::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 0.2em;
+  height: 0.2em;
+  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
+  border-radius: 50% 50% 0 0;
+  transform: translateX(-50%);
+}
+
+.silicon-picture {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: var(--stroke, 0.1em);
+  overflow: hidden;
+}
+.silicon-picture::before {
+  content: "";
+  position: absolute;
+  top: 0.1em;
+  left: 0.1em;
+  width: 0.1em;
+  height: 0.1em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 50%;
+}
+.silicon-picture::after {
+  content: "";
+  position: absolute;
+  top: 0.5em;
+  left: 0.25em;
+  width: 0.6em;
+  height: 0.6em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: var(--stroke, 0.1em) 0 0 0;
+  transform: rotate(45deg);
+  transform-origin: 50% 50%;
+}
+.silicon-picture.colored {
+  background-color: var(--light-blue,#61caea);
+  color: var(--dark-brown,#87683f);
+}
+.silicon-picture.colored::before {
+  box-shadow: 0 0 0.2em 0 var(--white,#ffffff);
+  background-color: var(--yellow,#f5c505);
+  color: var(--yellow,#f5c505);
+}
+.silicon-picture.colored::after {
+  background-color: var(--green,#10c565);
+  color: var(--dark-green,#0c964d);
+}
+
+.silicon-power-socket-eu {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
+  background-image: radial-gradient(closest-side, currentColor 100%, transparent), radial-gradient(closest-side, currentColor 100%, transparent), linear-gradient(to bottom, currentColor, currentColor calc(50% - calc(var(--stroke, 0.1em) * 0.5)), transparent calc(50% - calc(var(--stroke, 0.1em) * 0.5)), transparent calc(50% + calc(var(--stroke, 0.1em) * 0.5)), currentColor calc(50% + calc(var(--stroke, 0.1em) * 0.5)), currentColor), linear-gradient(to bottom, currentColor, currentColor calc(50% - calc(var(--stroke, 0.1em) * 0.5)), transparent calc(50% - calc(var(--stroke, 0.1em) * 0.5)), transparent calc(50% + calc(var(--stroke, 0.1em) * 0.5)), currentColor calc(50% + calc(var(--stroke, 0.1em) * 0.5)), currentColor);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: 25% center, 75% center, left top, right top;
+  background-size: calc(var(--stroke, 0.1em) * 1.5) calc(var(--stroke, 0.1em) * 1.5), calc(var(--stroke, 0.1em) * 1.5) calc(var(--stroke, 0.1em) * 1.5), calc(var(--stroke, 0.1em) * 0.5) 100%, calc(var(--stroke, 0.1em) * 0.5) 100%;
+}
+
+.silicon-power-socket-us {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 0.3em/0.5em;
+  background-image: linear-gradient(to bottom, currentColor, currentColor), linear-gradient(to bottom, currentColor, currentColor);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 30% calc(var(--stroke, 0.1em) * 2), 70% calc(var(--stroke, 0.1em) * 2);
+  background-size: calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 2), calc(var(--stroke, 0.1em) * 0.5) calc(var(--stroke, 0.1em) * 2);
+}
+.silicon-power-socket-us::before {
+  content: "";
+  position: absolute;
+  bottom: calc(var(--stroke, 0.1em));
+  left: 50%;
+  display: block;
+  width: var(--stroke, 0.1em);
+  height: var(--stroke, 0.1em);
+  border-radius: 50% 50% 0 0;
+  background-color: currentColor;
+  transform: translateX(-50%);
+}
+
+.silicon-refresh {
+  position: relative;
+  display: block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-radius: 50%;
+  transform: rotate(-22.5deg);
+}
+.silicon-refresh::before, .silicon-refresh::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: calc(var(--stroke, 0.1em) * 3);
+  height: calc(var(--stroke, 0.1em) * 3);
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+}
+.silicon-refresh::before {
+  top: 50%;
+  left: 50%;
+  border-bottom: none;
+  border-left: none;
+  transform: translate(25%, 75%) rotate(22.5deg);
+}
+.silicon-refresh::after {
+  right: 50%;
+  bottom: 50%;
+  border-top: none;
+  border-right: none;
+  transform: translate(-25%, -75%) rotate(22.5deg);
+}
+
+.silicon-reload {
+  position: relative;
+  display: block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  transform: rotate(180deg) scale(-1, 1);
+}
+.silicon-reload::before, .silicon-reload::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: calc(var(--stroke, 0.1em) * 3);
+  height: calc(var(--stroke, 0.1em) * 3);
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-bottom: none;
+  border-left: none;
+  transform: translate(25%, 75%) rotate(22.5deg);
+}
+
+.silicon-retweet {
+  position: relative;
+  display: block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-radius: 50%;
+  transform: rotate(-22.5deg);
+}
+.silicon-retweet::before, .silicon-retweet::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: calc(var(--stroke, 0.1em) * 3);
+  height: calc(var(--stroke, 0.1em) * 3);
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+}
+.silicon-retweet::before {
+  top: 50%;
+  left: 50%;
+  border-bottom: none;
+  border-left: none;
+  transform: translate(25%, 75%) rotate(22.5deg);
+}
+.silicon-retweet::after {
+  right: 50%;
+  bottom: 50%;
+  border-top: none;
+  border-right: none;
+  transform: translate(-25%, -75%) rotate(22.5deg);
+}
+
+.silicon-save {
+  position: relative;
+}
+
+.silicon-search {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
+}
+.silicon-search::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  display: block;
+  width: 0.5em;
+  height: var(--stroke, 0.1em);
+  box-sizing: border-box;
+  background-color: currentColor;
+  transform: translate(-0.1em, -0.1em) rotate(45deg);
+  transform-origin: 0 50%;
+}
+
+.silicon-shape-circle {
+  position: relative;
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
+}
+.silicon-shape-circle.colored {
+  background-color: var(--turquoise,#3feac3);
+  color: var(--turquoise,#3feac3);
+}
+
+.silicon-shape-drop {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50% 0 50% 50%;
+  transform: rotate(-45deg);
+}
+.silicon-shape-drop.colored {
+  background-color: var(--light-blue,#61caea);
+  color: var(--blue,#1eb3e0);
+}
+
+.silicon-shape-heart {
+  position: relative;
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  box-sizing: border-box;
+  border-bottom: var(--stroke, 0.1em) solid currentColor;
+  border-left: var(--stroke, 0.1em) solid currentColor;
+  transform: translateY(0.25em) rotate(-45deg);
+}
+.silicon-shape-heart::before, .silicon-shape-heart::after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+.silicon-shape-heart::before {
+  top: calc(-0.5em + var(--stroke, 0.1em));
+  left: calc(var(--stroke, 0.1em) * -1);
+  width: 0.75em;
+  height: 0.5em;
+  border-top: var(--stroke, 0.1em) solid currentColor;
+  border-right: var(--stroke, 0.1em) solid currentColor;
+  border-left: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 0.5em 0.5em 0 0;
+}
+.silicon-shape-heart::after {
+  top: 0;
+  left: calc(0.5em + var(--stroke, 0.1em));
+  width: 0.5em;
+  height: 0.75em;
+  border-top: var(--stroke, 0.1em) solid currentColor;
+  border-right: var(--stroke, 0.1em) solid currentColor;
+  border-bottom: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 0 0.5em 0.5em 0;
+}
+.silicon-shape-heart.colored, .silicon-shape-heart.colored::after, .silicon-shape-heart.colored::before {
+  background-color: var(--red,#eb0f33);
+  color: var(--dark-red,#bb0c29);
+}
+
+.silicon-shape-square {
+  position: relative;
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+}
+.silicon-shape-square.colored {
+  background-color: var(--purple,#7329b1);
+  color: var(--purple,#7329b1);
+}
+
+.silicon-smiley-angry {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
+  border-radius: 50%;
+  background-image: radial-gradient(closest-side, currentColor 100%, transparent), radial-gradient(closest-side, currentColor 100%, transparent);
+  background-repeat: no-repeat, no-repeat;
+  background-position: left calc(50% + 0.15em) bottom calc(50% + 0.1em), right calc(50% + 0.15em) bottom calc(50% + 0.1em);
+  background-size: 0.2em 0.2em, 0.2em 0.2em;
+}
+.silicon-smiley-angry::before, .silicon-smiley-angry::after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+.silicon-smiley-angry::after {
+  top: 50%;
+  left: 50%;
+  width: 0.5em;
+  height: 0.5em;
+  border: calc(var(--stroke, 0.1em) / 2) solid transparent;
+  border-bottom-color: currentColor;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.silicon-smiley-angry.colored {
+  background-color: var(--yellow,#f5c505);
+  background-image: radial-gradient(closest-side, var(--black,#101010) 50%, var(--white,#ffffff) 50%, var(--white,#ffffff) 100%, transparent), radial-gradient(closest-side, var(--black,#101010) 50%, var(--white,#ffffff) 50%, var(--white,#ffffff) 100%, transparent);
+  color: var(--yellow,#f5c505);
+}
+.silicon-smiley-angry.colored::after {
+  color: var(--black,#101010);
+}
+
+.silicon-smiley-angry {
+  background-image: none;
+}
+.silicon-smiley-angry::before, .silicon-smiley-angry::after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+.silicon-smiley-angry::before {
+  right: calc(50% + 0.05em);
+  bottom: 50%;
+  width: 0.2em;
+  height: 0.1em;
+  /* box */
+  box-shadow: 0.3em 0 0 0 currentColor;
+  border-radius: 0 0 0.1em 0.1em;
+  background-color: currentColor;
+}
+.silicon-smiley-angry::after {
+  border-top-color: currentColor;
+  border-bottom-color: transparent;
+  transform: translate(-50%, 25%);
+}
+.silicon-smiley-angry.colored::before {
+  bottom: calc(50% + 0.1em);
+  border-radius: 0.1em 0.1em 0 0;
+  color: var(--yellow,#f5c505);
+}
+
+.silicon-smiley-cry {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
+  border-radius: 50%;
+  background-image: radial-gradient(closest-side, currentColor 100%, transparent), radial-gradient(closest-side, currentColor 100%, transparent);
+  background-repeat: no-repeat, no-repeat;
+  background-position: left calc(50% + 0.15em) bottom calc(50% + 0.1em), right calc(50% + 0.15em) bottom calc(50% + 0.1em);
+  background-size: 0.2em 0.2em, 0.2em 0.2em;
+}
+.silicon-smiley-cry::before, .silicon-smiley-cry::after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+.silicon-smiley-cry::after {
+  top: 50%;
+  left: 50%;
+  width: 0.5em;
+  height: 0.5em;
+  border: calc(var(--stroke, 0.1em) / 2) solid transparent;
+  border-bottom-color: currentColor;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.silicon-smiley-cry.colored {
+  background-color: var(--yellow,#f5c505);
+  background-image: radial-gradient(closest-side, var(--black,#101010) 50%, var(--white,#ffffff) 50%, var(--white,#ffffff) 100%, transparent), radial-gradient(closest-side, var(--black,#101010) 50%, var(--white,#ffffff) 50%, var(--white,#ffffff) 100%, transparent);
+  color: var(--yellow,#f5c505);
+}
+.silicon-smiley-cry.colored::after {
+  color: var(--black,#101010);
+}
+
+.silicon-smiley-cry::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: calc(50% + 0.15em);
+  display: block;
+  width: 0.2em;
+  height: 0.2em;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 0 50% 50% 50%;
+  transform: rotate(45deg);
+}
+.silicon-smiley-cry::after {
+  border-top-color: currentColor;
+  border-bottom-color: transparent;
+  transform: translate(-50%, 25%);
+}
+.silicon-smiley-cry.colored::before {
+  background-color: #9999ff;
+  color: #6666ff;
+}
+
+.silicon-smiley-grin {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
+  border-radius: 50%;
+  background-image: radial-gradient(closest-side, currentColor 100%, transparent), radial-gradient(closest-side, currentColor 100%, transparent);
+  background-repeat: no-repeat, no-repeat;
+  background-position: left calc(50% + 0.15em) bottom calc(50% + 0.1em), right calc(50% + 0.15em) bottom calc(50% + 0.1em);
+  background-size: 0.2em 0.2em, 0.2em 0.2em;
+}
+.silicon-smiley-grin::before, .silicon-smiley-grin::after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+.silicon-smiley-grin::after {
+  top: 50%;
+  left: 50%;
+  width: 0.5em;
+  height: 0.5em;
+  border: calc(var(--stroke, 0.1em) / 2) solid transparent;
+  border-bottom-color: currentColor;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.silicon-smiley-grin.colored {
+  background-color: var(--yellow,#f5c505);
+  background-image: radial-gradient(closest-side, var(--black,#101010) 50%, var(--white,#ffffff) 50%, var(--white,#ffffff) 100%, transparent), radial-gradient(closest-side, var(--black,#101010) 50%, var(--white,#ffffff) 50%, var(--white,#ffffff) 100%, transparent);
+  color: var(--yellow,#f5c505);
+}
+.silicon-smiley-grin.colored::after {
+  color: var(--black,#101010);
+}
+
+.silicon-smiley-grin::after {
+  content: "";
+  width: 0.5em;
+  height: 0.25em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-radius: 0 0 0.5em 0.5em;
+  transform: translate(-50%, 25%);
+}
+.silicon-smiley-grin.colored::after {
+  background-color: white;
+  color: black;
+}
+
+.silicon-smiley-happy {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
+  border-radius: 50%;
+  background-image: radial-gradient(closest-side, currentColor 100%, transparent), radial-gradient(closest-side, currentColor 100%, transparent);
+  background-repeat: no-repeat, no-repeat;
+  background-position: left calc(50% + 0.15em) bottom calc(50% + 0.1em), right calc(50% + 0.15em) bottom calc(50% + 0.1em);
+  background-size: 0.2em 0.2em, 0.2em 0.2em;
+}
+.silicon-smiley-happy::before, .silicon-smiley-happy::after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+.silicon-smiley-happy::after {
+  top: 50%;
+  left: 50%;
+  width: 0.5em;
+  height: 0.5em;
+  border: calc(var(--stroke, 0.1em) / 2) solid transparent;
+  border-bottom-color: currentColor;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.silicon-smiley-happy.colored {
+  background-color: var(--yellow,#f5c505);
+  background-image: radial-gradient(closest-side, var(--black,#101010) 50%, var(--white,#ffffff) 50%, var(--white,#ffffff) 100%, transparent), radial-gradient(closest-side, var(--black,#101010) 50%, var(--white,#ffffff) 50%, var(--white,#ffffff) 100%, transparent);
+  color: var(--yellow,#f5c505);
+}
+.silicon-smiley-happy.colored::after {
+  color: var(--black,#101010);
+}
+
+.silicon-smiley-sad {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
+  border-radius: 50%;
+  background-image: radial-gradient(closest-side, currentColor 100%, transparent), radial-gradient(closest-side, currentColor 100%, transparent);
+  background-repeat: no-repeat, no-repeat;
+  background-position: left calc(50% + 0.15em) bottom calc(50% + 0.1em), right calc(50% + 0.15em) bottom calc(50% + 0.1em);
+  background-size: 0.2em 0.2em, 0.2em 0.2em;
+}
+.silicon-smiley-sad::before, .silicon-smiley-sad::after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+.silicon-smiley-sad::after {
+  top: 50%;
+  left: 50%;
+  width: 0.5em;
+  height: 0.5em;
+  border: calc(var(--stroke, 0.1em) / 2) solid transparent;
+  border-bottom-color: currentColor;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.silicon-smiley-sad.colored {
+  background-color: var(--yellow,#f5c505);
+  background-image: radial-gradient(closest-side, var(--black,#101010) 50%, var(--white,#ffffff) 50%, var(--white,#ffffff) 100%, transparent), radial-gradient(closest-side, var(--black,#101010) 50%, var(--white,#ffffff) 50%, var(--white,#ffffff) 100%, transparent);
+  color: var(--yellow,#f5c505);
+}
+.silicon-smiley-sad.colored::after {
+  color: var(--black,#101010);
+}
+
+.silicon-smiley-sad::after {
+  border-top-color: currentColor;
+  border-bottom-color: transparent;
+  transform: translate(-50%, 25%);
+}
+
+.silicon-smiley-wink {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 1) solid currentColor;
+  border-radius: 50%;
+  background-image: radial-gradient(closest-side, currentColor 100%, transparent), radial-gradient(closest-side, currentColor 100%, transparent);
+  background-repeat: no-repeat, no-repeat;
+  background-position: left calc(50% + 0.15em) bottom calc(50% + 0.1em), right calc(50% + 0.15em) bottom calc(50% + 0.1em);
+  background-size: 0.2em 0.2em, 0.2em 0.2em;
+}
+.silicon-smiley-wink::before, .silicon-smiley-wink::after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+.silicon-smiley-wink::after {
+  top: 50%;
+  left: 50%;
+  width: 0.5em;
+  height: 0.5em;
+  border: calc(var(--stroke, 0.1em) / 2) solid transparent;
+  border-bottom-color: currentColor;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.silicon-smiley-wink.colored {
+  background-color: var(--yellow,#f5c505);
+  background-image: radial-gradient(closest-side, var(--black,#101010) 50%, var(--white,#ffffff) 50%, var(--white,#ffffff) 100%, transparent), radial-gradient(closest-side, var(--black,#101010) 50%, var(--white,#ffffff) 50%, var(--white,#ffffff) 100%, transparent);
+  color: var(--yellow,#f5c505);
+}
+.silicon-smiley-wink.colored::after {
+  color: var(--black,#101010);
+}
+
+.silicon-smiley-wink {
+  background-image: inherit, inear-gradient(to right, currentColor, currentColor);
+  background-position: inherit, left calc(50% + .15em) bottom calc(50% + .1em);
+  background-size: inherit, 0.2em 0.05em;
+}
+
+.silicon-suitcase {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 0.75em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: var(--stroke, 0.1em);
+}
+.silicon-suitcase::before, .silicon-suitcase::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  display: block;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+}
+.silicon-suitcase::before {
+  top: calc(var(--stroke, 0.1em) * -1);
+  width: 0.5em;
+  height: calc(100% + var(--stroke, 0.1em) * 2);
+  border-top: none;
+  border-bottom: none;
+  transform: translateX(-50%);
+}
+.silicon-suitcase::after {
+  bottom: calc(100% + var(--stroke, 0.1em));
+  width: 0.3em;
+  height: 0.125em;
+  border-bottom: none;
+  border-radius: 0.25em 0.25em 0 0;
+  transform: translateX(-50%);
+}
+.silicon-suitcase.colored {
+  background-color: var(--brown,#aa834f);
+  color: var(--dark-brown,#87683f);
+}
+.silicon-suitcase.colored::before {
+  color: var(--gray,#7f7f7f);
+}
+.silicon-suitcase.colored::after {
+  color: var(--dark,#303030);
+}
+
+.silicon-text-align-center {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: calc(var(--stroke, 0.1em) * 3);
+  box-sizing: border-box;
+  border-top: var(--stroke, 0.1em) solid currentColor;
+  border-right: none;
+  border-left: none;
+  background-image: linear-gradient(to right, currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 0.75em var(--stroke, 0.1em);
+  transform: translateY(calc(var(--stroke, 0.1em) * -2));
+}
+.silicon-text-align-center::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--stroke, 0.1em) * 3);
+  left: 0;
+  display: block;
+  width: 100%;
+  height: calc(var(--stroke, 0.1em) * 3);
+  box-sizing: border-box;
+  border-top: var(--stroke, 0.1em) solid currentColor;
+  border-right: none;
+  border-left: none;
+  background-image: linear-gradient(to right, currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 0.5em var(--stroke, 0.1em);
+}
+.silicon-text-align-center.colored {
+  color: var(--dark,#303030);
+}
+
+.silicon-text-align-center {
+  background-position: bottom center;
+}
+.silicon-text-align-center::before {
+  background-position: bottom center;
+}
+
+.silicon-text-align-justify {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: calc(var(--stroke, 0.1em) * 3);
+  box-sizing: border-box;
+  border-top: var(--stroke, 0.1em) solid currentColor;
+  border-right: none;
+  border-left: none;
+  background-image: linear-gradient(to right, currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 0.75em var(--stroke, 0.1em);
+  transform: translateY(calc(var(--stroke, 0.1em) * -2));
+}
+.silicon-text-align-justify::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--stroke, 0.1em) * 3);
+  left: 0;
+  display: block;
+  width: 100%;
+  height: calc(var(--stroke, 0.1em) * 3);
+  box-sizing: border-box;
+  border-top: var(--stroke, 0.1em) solid currentColor;
+  border-right: none;
+  border-left: none;
+  background-image: linear-gradient(to right, currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 0.5em var(--stroke, 0.1em);
+}
+.silicon-text-align-justify.colored {
+  color: var(--dark,#303030);
+}
+
+.silicon-text-align-justify {
+  background-size: 1em var(--stroke, 0.1em);
+}
+
+.silicon-text-align-left {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: calc(var(--stroke, 0.1em) * 3);
+  box-sizing: border-box;
+  border-top: var(--stroke, 0.1em) solid currentColor;
+  border-right: none;
+  border-left: none;
+  background-image: linear-gradient(to right, currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 0.75em var(--stroke, 0.1em);
+  transform: translateY(calc(var(--stroke, 0.1em) * -2));
+}
+.silicon-text-align-left::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--stroke, 0.1em) * 3);
+  left: 0;
+  display: block;
+  width: 100%;
+  height: calc(var(--stroke, 0.1em) * 3);
+  box-sizing: border-box;
+  border-top: var(--stroke, 0.1em) solid currentColor;
+  border-right: none;
+  border-left: none;
+  background-image: linear-gradient(to right, currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 0.5em var(--stroke, 0.1em);
+}
+.silicon-text-align-left.colored {
+  color: var(--dark,#303030);
+}
+
+.silicon-text-align-right {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: calc(var(--stroke, 0.1em) * 3);
+  box-sizing: border-box;
+  border-top: var(--stroke, 0.1em) solid currentColor;
+  border-right: none;
+  border-left: none;
+  background-image: linear-gradient(to right, currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 0.75em var(--stroke, 0.1em);
+  transform: translateY(calc(var(--stroke, 0.1em) * -2));
+}
+.silicon-text-align-right::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--stroke, 0.1em) * 3);
+  left: 0;
+  display: block;
+  width: 100%;
+  height: calc(var(--stroke, 0.1em) * 3);
+  box-sizing: border-box;
+  border-top: var(--stroke, 0.1em) solid currentColor;
+  border-right: none;
+  border-left: none;
+  background-image: linear-gradient(to right, currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 0.5em var(--stroke, 0.1em);
+}
+.silicon-text-align-right.colored {
+  color: var(--dark,#303030);
+}
+
+.silicon-text-align-right {
+  background-position: bottom right;
+}
+.silicon-text-align-right::before {
+  background-position: bottom right;
+}
+
+.silicon-time-clock {
+  --time-hours: 2;
+  --time-minutes: 35;
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
+}
+.silicon-time-clock::before, .silicon-time-clock::after {
+  content: "";
+  position: absolute;
+  bottom: calc(50% - (var(--stroke, 0.1em) /2));
+  left: 50%;
+  display: block;
+  width: calc(var(--stroke, 0.1em) / 2);
+  background-color: currentColor;
+  transform-origin: 50% calc(100% - (var(--stroke, 0.1em) / 2));
+  margin-left: calc(var(--stroke, 0.1em) * -0.25);
+}
+.silicon-time-clock::before {
+  height: 0.5em;
+  transform: rotate(calc(360deg / 12 * var(--time-hours, 4)));
+}
+.silicon-time-clock::after {
+  height: 0.35em;
+  transform: rotate(calc(360deg / 60 * var(--time-minutes, 11)));
+}
+
+.silicon-time-watch {
+  position: relative;
+  display: inline-block;
+  width: 0.5em;
+  height: 1em;
+  box-sizing: border-box;
+  background-image: radial-gradient(closest-side, transparent calc(100% - 0.05em), currentColor calc(100% - 0.05em), currentColor 100%, transparent), linear-gradient(to bottom, currentColor, currentColor), linear-gradient(to bottom, currentColor, currentColor);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: center center, center top, center bottom;
+  background-size: 0.5em 0.5em, 0.3em 0.3em, 0.3em 0.3em;
+}
+.silicon-time-watch::before, .silicon-time-watch::after {
+  content: "";
+  position: absolute;
+  bottom: calc(50% - (var(--stroke, 0.1em) / 4));
+  left: 50%;
+  display: block;
+  width: calc(var(--stroke, 0.1em) / 4);
+  background-color: currentColor;
+  transform-origin: 50% calc(100% - (var(--stroke, 0.1em) / 4));
+  margin-left: calc(var(--stroke, 0.1em) * -0.25);
+}
+.silicon-time-watch::before {
+  height: 0.2em;
+  transform: rotate(calc(360deg / 12 * var(--time-hours, 4)));
+}
+.silicon-time-watch::after {
+  height: 0.15em;
+  transform: rotate(calc(360deg / 60 * var(--time-minutes, 11)));
+}
+
+.silicon-trash {
+  position: relative;
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-top: none;
+  border-radius: 0 0 0.1em 0.1em;
+  transform: translateY(0.2em);
+}
+.silicon-trash::before, .silicon-trash::after {
+  content: "";
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  transform: translateX(-50%);
+}
+.silicon-trash::before {
+  bottom: calc(100% + var(--stroke, 0.1em));
+  left: 50%;
+  width: 1em;
+  height: var(--stroke, 0.1em);
+  border: none;
+  background-color: currentColor;
+}
+.silicon-trash::after {
+  bottom: calc(100% + (var(--stroke, 0.1em) * 2));
+  left: 50%;
+  width: 0.2em;
+  height: 0.1em;
+  border: calc(var(--stroke, 0.1em) / 2) solid currentColor;
+  border-bottom: none;
+  border-radius: 0.2em 0.2em 0 0;
+}
+
+.silicon-user {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 0.65em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-bottom: 0;
+  border-radius: 0.75em 0.75em 0 0;
+  transform: translateY(0.175em);
+}
+.silicon-user::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  display: block;
+  width: 0.6em;
+  height: 0.6em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.silicon-vehicle-car {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 0.3em;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
+  border-radius: var(--stroke, 0.1em) var(--stroke, 0.1em) 0 0;
+  background-image: radial-gradient(closest-side, currentColor 50%, transparent 50%), radial-gradient(closest-side, currentColor 50%, transparent 50%);
+  background-repeat: no-repeat, no-repeat;
+  background-position: left center, right center;
+  background-size: 0.2em 0.2em, 0.2em 0.2em;
+}
+.silicon-vehicle-car::before, .silicon-vehicle-car::after {
+  content: "";
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+}
+.silicon-vehicle-car::before {
+  /* position  */
+  bottom: 100%;
+  left: 50%;
+  display: inline-block;
+  width: 0.8em;
+  height: 0.3em;
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) * 0.5) solid currentColor;
+  border-radius: 0.2em 0.2em 0 0/0.5em 0.5em 0 0;
+  background-image: radial-gradient(closest-side, transparent calc(100% - 0.025em), currentColor calc(100% - 0.025em), currentColor 100%, transparent);
+  background-repeat: no-repeat;
+  background-position: 90% 0.1em;
+  background-size: 0.2em 0.2em;
+  transform: translateX(-50%);
+}
+.silicon-vehicle-car::after {
+  top: 100%;
+  left: calc(calc(var(--stroke, 0.1em) * 0.5) * -1);
+  width: 0.15em;
+  height: 0.2em;
+  box-shadow: 0.85em 0 0 0 currentColor;
+  border-radius: 0 0 0.05em 0.05em;
+  background-color: currentColor;
+}
+
+.silicon-volume-high {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border-bottom: none;
+  border-left: none;
+  transform: translateX(25%) rotate(45deg);
+}
+.silicon-volume-high::before, .silicon-volume-high::after {
+  content: "";
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+}
+.silicon-volume-high::before {
+  bottom: calc(var(--stroke, 0.1em) * -1.5);
+  left: calc(var(--stroke, 0.1em) * -1.5);
+  width: 0;
+  height: 0;
+  border: calc(var(--stroke, 0.1em) * 3) solid currentColor;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-radius: var(--stroke, 0.1em);
+}
+.silicon-volume-high::after {
+  bottom: calc(var(--stroke, 0.1em) * -2);
+  left: calc(var(--stroke, 0.1em) * -2);
+  width: calc(var(--stroke, 0.1em) * 4);
+  height: calc(var(--stroke, 0.1em) * 4);
+  background-color: currentColor;
+  transform: rotate(-45deg);
+}
+.silicon-volume-high.colored {
+  color: var(--gray,#7f7f7f);
+}
+.silicon-volume-high.colored::after, .silicon-volume-high.colored::before {
+  color: var(--blue,#1eb3e0);
+}
+
+.silicon-volume-high {
+  background-image: radial-gradient(at bottom left, transparent calc(35% - var(--stroke, 0.05em)), currentColor calc(35% - var(--stroke, 0.05em)), currentColor 35%, transparent 35%), radial-gradient(at bottom left, transparent calc(50% - var(--stroke, 0.05em)), currentColor calc(50% - var(--stroke, 0.05em)), currentColor 50%, transparent 50%), radial-gradient(at bottom left, transparent calc(65% - var(--stroke, 0.05em)), currentColor calc(65% - var(--stroke, 0.05em)), currentColor 65%, transparent 65%);
+}
+
+.silicon-volume-low {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border-bottom: none;
+  border-left: none;
+  transform: translateX(25%) rotate(45deg);
+}
+.silicon-volume-low::before, .silicon-volume-low::after {
+  content: "";
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+}
+.silicon-volume-low::before {
+  bottom: calc(var(--stroke, 0.1em) * -1.5);
+  left: calc(var(--stroke, 0.1em) * -1.5);
+  width: 0;
+  height: 0;
+  border: calc(var(--stroke, 0.1em) * 3) solid currentColor;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-radius: var(--stroke, 0.1em);
+}
+.silicon-volume-low::after {
+  bottom: calc(var(--stroke, 0.1em) * -2);
+  left: calc(var(--stroke, 0.1em) * -2);
+  width: calc(var(--stroke, 0.1em) * 4);
+  height: calc(var(--stroke, 0.1em) * 4);
+  background-color: currentColor;
+  transform: rotate(-45deg);
+}
+.silicon-volume-low.colored {
+  color: var(--gray,#7f7f7f);
+}
+.silicon-volume-low.colored::after, .silicon-volume-low.colored::before {
+  color: var(--blue,#1eb3e0);
+}
+
+.silicon-volume-low {
+  background-image: radial-gradient(at bottom left, transparent calc(35% - var(--stroke, 0.05em)), currentColor calc(35% - var(--stroke, 0.05em)), currentColor 35%, transparent 35%);
+}
+
+.silicon-volume-medium {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border-bottom: none;
+  border-left: none;
+  transform: translateX(25%) rotate(45deg);
+}
+.silicon-volume-medium::before, .silicon-volume-medium::after {
+  content: "";
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+}
+.silicon-volume-medium::before {
+  bottom: calc(var(--stroke, 0.1em) * -1.5);
+  left: calc(var(--stroke, 0.1em) * -1.5);
+  width: 0;
+  height: 0;
+  border: calc(var(--stroke, 0.1em) * 3) solid currentColor;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-radius: var(--stroke, 0.1em);
+}
+.silicon-volume-medium::after {
+  bottom: calc(var(--stroke, 0.1em) * -2);
+  left: calc(var(--stroke, 0.1em) * -2);
+  width: calc(var(--stroke, 0.1em) * 4);
+  height: calc(var(--stroke, 0.1em) * 4);
+  background-color: currentColor;
+  transform: rotate(-45deg);
+}
+.silicon-volume-medium.colored {
+  color: var(--gray,#7f7f7f);
+}
+.silicon-volume-medium.colored::after, .silicon-volume-medium.colored::before {
+  color: var(--blue,#1eb3e0);
+}
+
+.silicon-volume-medium {
+  background-image: radial-gradient(at bottom left, transparent calc(35% - var(--stroke, 0.05em)), currentColor calc(35% - var(--stroke, 0.05em)), currentColor 35%, transparent 35%), radial-gradient(at bottom left, transparent calc(50% - var(--stroke, 0.05em)), currentColor calc(50% - var(--stroke, 0.05em)), currentColor 50%, transparent 50%);
+}
+
+.silicon-volume-mute {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border-bottom: none;
+  border-left: none;
+  transform: translateX(25%) rotate(45deg);
+}
+.silicon-volume-mute::before, .silicon-volume-mute::after {
+  content: "";
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+}
+.silicon-volume-mute::before {
+  bottom: calc(var(--stroke, 0.1em) * -1.5);
+  left: calc(var(--stroke, 0.1em) * -1.5);
+  width: 0;
+  height: 0;
+  border: calc(var(--stroke, 0.1em) * 3) solid currentColor;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-radius: var(--stroke, 0.1em);
+}
+.silicon-volume-mute::after {
+  bottom: calc(var(--stroke, 0.1em) * -2);
+  left: calc(var(--stroke, 0.1em) * -2);
+  width: calc(var(--stroke, 0.1em) * 4);
+  height: calc(var(--stroke, 0.1em) * 4);
+  background-color: currentColor;
+  transform: rotate(-45deg);
+}
+.silicon-volume-mute.colored {
+  color: var(--gray,#7f7f7f);
+}
+.silicon-volume-mute.colored::after, .silicon-volume-mute.colored::before {
+  color: var(--blue,#1eb3e0);
+}
+
+.silicon-volume-mute {
+  background-image: radial-gradient(at bottom left, transparent calc(35% - var(--stroke, 0.05em)), currentColor calc(35% - var(--stroke, 0.05em)), currentColor 35%, transparent 35%), radial-gradient(at bottom left, transparent calc(50% - var(--stroke, 0.05em)), currentColor calc(50% - var(--stroke, 0.05em)), currentColor 50%, transparent 50%), radial-gradient(at bottom left, transparent calc(65% - var(--stroke, 0.05em)), currentColor calc(65% - var(--stroke, 0.05em)), currentColor 65%, transparent 65%);
+}
+
+.silicon-volume-off {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border-bottom: none;
+  border-left: none;
+  transform: translateX(25%) rotate(45deg);
+}
+.silicon-volume-off::before, .silicon-volume-off::after {
+  content: "";
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+}
+.silicon-volume-off::before {
+  bottom: calc(var(--stroke, 0.1em) * -1.5);
+  left: calc(var(--stroke, 0.1em) * -1.5);
+  width: 0;
+  height: 0;
+  border: calc(var(--stroke, 0.1em) * 3) solid currentColor;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-radius: var(--stroke, 0.1em);
+}
+.silicon-volume-off::after {
+  bottom: calc(var(--stroke, 0.1em) * -2);
+  left: calc(var(--stroke, 0.1em) * -2);
+  width: calc(var(--stroke, 0.1em) * 4);
+  height: calc(var(--stroke, 0.1em) * 4);
+  background-color: currentColor;
+  transform: rotate(-45deg);
+}
+.silicon-volume-off.colored {
+  color: var(--gray,#7f7f7f);
+}
+.silicon-volume-off.colored::after, .silicon-volume-off.colored::before {
+  color: var(--blue,#1eb3e0);
+}
+
+.silicon-weather-sun {
+  position: relative;
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  box-shadow: -0.55em 0 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0.55em 0 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0 -0.55em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0 0.55em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, -0.4em -0.4em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, -0.4em 0.4em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0.4em -0.4em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor, 0.4em 0.4em 0 calc((var(--stroke, 0.1em) * 1.75) * -1) currentColor;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
+}
+
+.silicon-wifi {
+  position: relative;
+  display: inline-block;
+  width: calc(var(--stroke, 0.1em) * 7);
+  height: calc(var(--stroke, 0.1em) * 7);
+  box-sizing: border-box;
+  border: calc(var(--stroke, 0.1em) * 1.5) solid currentColor;
+  border-bottom: none;
+  border-left: none;
+  border-radius: 0 calc(var(--stroke, 0.1em) * 8) 0 0;
+  transform: rotate(-45deg);
+}
+.silicon-wifi::before, .silicon-wifi::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  box-sizing: border-box;
+}
+.silicon-wifi::before {
+  width: calc(var(--stroke, 0.1em) * 4.25);
+  height: calc(var(--stroke, 0.1em) * 4.25);
+  border: calc(var(--stroke, 0.1em) * 1.5) solid currentColor;
+  border-bottom: none;
+  border-left: none;
+  border-radius: 0 calc(var(--stroke, 0.1em) * 4.25) 0 0;
+}
+.silicon-wifi::after {
+  width: calc(var(--stroke, 0.1em) * 1.5);
+  height: calc(var(--stroke, 0.1em) * 1.5);
+  border: calc(var(--stroke, 0.1em) * 1.5) solid currentColor;
+  border-bottom: none;
+  border-left: none;
+  border-radius: 0 calc(var(--stroke, 0.1em) * 1.5) 0 0;
+}
+.silicon-wifi.colored {
+  color: var(--blue,#1eb3e0);
+}
+
+.silicon-zoom-in {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
+}
+.silicon-zoom-in::before, .silicon-zoom-in::after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+.silicon-zoom-in::before {
+  top: 100%;
+  left: 100%;
+  display: block;
+  width: 0.5em;
+  height: var(--stroke, 0.1em);
+  background-color: currentColor;
+  transform: translate(-0.1em, -0.1em) rotate(45deg);
+  transform-origin: 0 50%;
+}
+.silicon-zoom-in::after {
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0.4em;
+  height: 0.4em;
+  background-image: linear-gradient(to right, transparent calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% + var(--stroke, 0.1em) / 4), transparent calc(50% + var(--stroke, 0.1em) / 4)), linear-gradient(to bottom, transparent calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% + var(--stroke, 0.1em) / 4), transparent calc(50% + var(--stroke, 0.1em) / 4));
+  transform: translate(-50%, -50%);
+}
+
+.silicon-zoom-out {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
+}
+.silicon-zoom-out::before, .silicon-zoom-out::after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+.silicon-zoom-out::before {
+  top: 100%;
+  left: 100%;
+  display: block;
+  width: 0.5em;
+  height: var(--stroke, 0.1em);
+  background-color: currentColor;
+  transform: translate(-0.1em, -0.1em) rotate(45deg);
+  transform-origin: 0 50%;
+}
+.silicon-zoom-out::after {
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0.4em;
+  height: 0.4em;
+  background-image: linear-gradient(to bottom, transparent calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% - var(--stroke, 0.1em) / 4), currentColor calc(50% + var(--stroke, 0.1em) / 4), transparent calc(50% + var(--stroke, 0.1em) / 4));
+  transform: translate(-50%, -50%);
+}
+
 .align-center {
   display: flex;
   align-items: center;
@@ -16926,9 +20317,15 @@ p {
 }
 
 h1 {
-  font-weight: normal;
+  font-weight: bold;
   font-size: 4.1666666667vw;
   line-height: 1;
+  text-align: center;
+}
+@media only screen and (min-width: 0px) and (max-width: 750px) {
+  h1 {
+    text-align: left;
+  }
 }
 @media only screen and (max-width: 768px) {
   h1 {
@@ -16997,3 +20394,123 @@ p + blockquote {
 .content {
   padding: 4.1666666667vw;
 }
+@media only screen and (max-width: 1440px) {
+  .content {
+    padding: 60px;
+  }
+}
+.content .row + .row {
+  margin-top: 2rem;
+}
+
+code[class*=language] {
+  background-color: rgba(16, 16, 16, 0.85);
+  border: 1px solid #101010;
+  color: white;
+  padding: 1rem;
+  max-width: 100%;
+}
+@media only screen and (max-width: 1440px) {
+  code[class*=language] {
+    width: calc(100% + 60px);
+    margin-left: -30px;
+  }
+}
+
+.input-search button {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  border: var(--stroke, 0.1em) solid currentColor;
+  border-radius: 50%;
+}
+.input-search button::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  display: block;
+  width: 0.5em;
+  height: var(--stroke, 0.1em);
+  box-sizing: border-box;
+  background-color: currentColor;
+  transform: translate(-0.1em, -0.1em) rotate(45deg);
+  transform-origin: 0 50%;
+}
+
+.input-search button:hover {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+}
+.input-search button:hover::before, .input-search button:hover::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 100%;
+  height: var(--stroke, 0.1em);
+  box-sizing: border-box;
+  background-color: currentColor;
+  transform: translate(-50%, -50%);
+}
+
+.input-search button:hover {
+  transform: rotate(45deg);
+}
+.input-search button:hover::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.search {
+  padding: 4.1666666667vw;
+}
+
+.input-search {
+  display: flex;
+  position: relative;
+}
+.input-search [type=search] {
+  width: 100%;
+  font-size: 1rem;
+  padding: 1em 2em;
+  line-height: 1em;
+  border: 1px solid rgba(16, 16, 16, 0.25);
+  border-radius: 1.75rem;
+  transition: all 0.3s;
+}
+.input-search [type=search]:focus {
+  outline: none;
+  border-color: rgba(30, 179, 224, 0.25);
+  box-shadow: 0 0 1rem 0 rgba(30, 179, 224, 0.25);
+}
+.input-search [type=search]:focus + button {
+  color: #1eb3e0;
+}
+.input-search [type=search]::placeholder {
+  color: rgba(16, 16, 16, 0.25);
+}
+.input-search [type=search] + button {
+  background: none;
+  border: none;
+  color: rgba(16, 16, 16, 0.5);
+  font-size: 15px;
+  position: absolute;
+  right: 0;
+  --stroke: 0.075em;
+  padding: 1.25em;
+}
+
+.switch {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=app.full.css.map */

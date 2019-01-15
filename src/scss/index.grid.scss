@@ -1,5 +1,5 @@
 // Load custom-output & setting tools
-@import '../node_modules/henris/src/scss/custom-output.scss';
+@import 'henris/src/scss/custom-output.scss';
 
 // Define output settings for project
 $output: set-output(css, true);
@@ -17,5 +17,5 @@ $output: set-output(typography, false);
 $output: set-output(grid, true);
 
 // Output the whole framework
-@import '../node_modules/henris/index.scss';
+@import 'henris';
 

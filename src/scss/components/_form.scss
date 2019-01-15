@@ -1,4 +1,5 @@
-@include silicon-search();
+@include silicon-search('.input-search button');
+@include silicon-math-times('.input-search button:hover');
 
 .search{
 	padding: grid(1); 

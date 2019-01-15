@@ -52,6 +52,6 @@ function renderFullStyle() {
 	);
 }
 
-renderBaseStyle();
-renderGridStyle();
+// renderBaseStyle();
+// renderGridStyle();
 renderFullStyle();

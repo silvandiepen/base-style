@@ -6,6 +6,10 @@
 	"scripts": {
 		"test": "npm run build && node script/test.js",
 		"build": "node script/sass.js",
+		"sass": "npm run sass:default && npm run sass:grid && npm run sass:full",
+		"sass:default": "sass --load-path node_modules src/scss/index.scss dist/app.css",
+		"sass:grid": "sass --load-path node_modules src/scss/index.grid.scss dist/app.grid.css",
+		"sass:full": "sass --load-path node_modules src/scss/index.full.scss dist/app.full.css",
 		"dev": "sass src/scss/app.scss dist/app.css --watch"
 	},
 	"repository": {
@@ -34,6 +38,6 @@
 	},
 	"dependencies": {
 		"henris": "^0.5.1",
-		"silicons": "^0.1.5"
+		"silicons": "^0.1.7"
 	}
 }
