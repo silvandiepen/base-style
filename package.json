@@ -5,7 +5,7 @@
 	"main": "index.scss",
 	"scripts": {
 		"test": "npm run build && node script/test.js",
-		"build": "node script/sass.js",
+		"build": "npm run sass",
 		"sass": "npm run sass:default && npm run sass:grid && npm run sass:full",
 		"sass:default": "sass --load-path node_modules src/scss/index.scss dist/app.css",
 		"sass:grid": "sass --load-path node_modules src/scss/index.grid.scss dist/app.grid.css",
