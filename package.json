@@ -37,7 +37,7 @@
 		"stylelint-order": "^2.0.0"
 	},
 	"dependencies": {
-		"henris": "^0.6.0-rc4",
+		"henris": "^0.6.0-rc5",
 		"silicons": "^0.1.7"
 	}
 }
