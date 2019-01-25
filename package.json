@@ -1,6 +1,6 @@
 {
 	"name": "@sil/base-style",
-	"version": "0.0.9",
+	"version": "0.0.10",
 	"description": "Basic styling css from projects",
 	"main": "index.scss",
 	"scripts": {
