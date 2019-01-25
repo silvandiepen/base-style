@@ -13436,12 +13436,12 @@ input[type=submit]:not(.button):not([class^=button-icon]):active {
   width: 100%;
   height: 0.5rem;
   border-radius: 25px;
-  background-color: var(--range-track-background, var(--form-border-color, var(--color-dark, rgba(16, 16, 16, 0.25))));
+  background: var(--range-track-background, var(--form-border-color, var(--color-dark, rgba(16, 16, 16, 0.25))));
   animation-timing-function: 0.2s;
   cursor: pointer;
 }
 .input-range [type=range]:focus::-webkit-slider-runnable-track {
-  background-color: var(--range-track-focus-background, var(--form-accent, var(--color-primary, #1eb3e0)));
+  background: var(--range-track-focus-background, var(--form-accent, var(--color-primary, #1eb3e0)));
 }
 .input-range [type=range]::-webkit-slider-thumb {
   width: 1rem;
@@ -13460,7 +13460,7 @@ input[type=submit]:not(.button):not([class^=button-icon]):active {
   width: 100%;
   height: 0.5rem;
   border-radius: 25px;
-  background-color: var(--range-track-background, var(--form-border-color, var(--color-dark, rgba(16, 16, 16, 0.25))));
+  background: var(--range-track-background, var(--form-border-color, var(--color-dark, rgba(16, 16, 16, 0.25))));
   animation-timing-function: 0.2s;
   cursor: pointer;
 }
@@ -13477,7 +13477,7 @@ input[type=submit]:not(.button):not([class^=button-icon]):active {
   height: 0.5rem;
   border-width: 1rem 0;
   border-color: transparent;
-  background-color: var(--range-track-background, var(--form-border-color, var(--color-dark, rgba(16, 16, 16, 0.25))));
+  background: var(--range-track-background, var(--form-border-color, var(--color-dark, rgba(16, 16, 16, 0.25))));
   color: transparent;
   animation-timing-function: 0.2s;
   cursor: pointer;
@@ -13501,10 +13501,10 @@ input[type=submit]:not(.button):not([class^=button-icon]):active {
   cursor: pointer;
 }
 .input-range [type=range]:focus::-ms-fill-lower {
-  background-color: var(--range-track-focus-background, var(--form-accent, var(--color-primary, #1eb3e0)));
+  background: var(--range-track-focus-background, var(--form-accent, var(--color-primary, #1eb3e0)));
 }
 .input-range [type=range]:focus::-ms-fill-upper {
-  background-color: var(--range-track-focus-background, var(--form-accent, var(--color-primary, #1eb3e0)));
+  background: var(--range-track-focus-background, var(--form-accent, var(--color-primary, #1eb3e0)));
 }
 .input-range + label {
   margin-left: 1rem;
