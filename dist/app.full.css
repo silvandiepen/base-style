@@ -13265,23 +13265,21 @@ fieldset legend {
 .input textarea::placeholder, .input-field textarea::placeholder {
   color: var(--form-text-color-placeholder, var(--form-text-color, #101010));
   opacity: 0.5;
-  transition: filter 0.3s;
+  transition: opacity 0.3s;
 }
 .input textarea:focus, .input-field textarea:focus {
+  background: var(--form-body-focus, var(--form-body, var(--color-light, #ffffff)));
   color: var(--form-text-color-focus, var(--form-text-color, #101010));
   border-color: var(--form-border-focus, var(--color-dark, #1eb3e0));
   outline: var(--outline-focus, var(--form-outline-focus));
 }
 .input textarea:focus::placeholder, .input textarea:focus:hover::placeholder, .input-field textarea:focus::placeholder, .input-field textarea:focus:hover::placeholder {
-  filter: blur(5px);
+  opacity: 0;
 }
 .input textarea:hover, .input-field textarea:hover {
+  background: var(--form-body-hover, var(--form-body, var(--color-light, #ffffff)));
   color: var(--form-text-color-hover, var(--form-text-color, #101010));
   border-color: var(--form-border-color, var(--color-dark, rgba(16, 16, 16, 0.5)));
-}
-.input textarea:hover::placeholder, .input-field textarea:hover::placeholder {
-  color: rgba(16, 16, 16, 0.2);
-  filter: blur(0px);
 }
 .input textarea:not(:empty), .input-field textarea:not(:empty) {
   border: 1px solid rgba(16, 16, 16, 0.25);
@@ -13322,6 +13320,7 @@ fieldset legend {
   -webkit-appearance: none;
   padding: var(--form-input-padding, 0.75rem);
   color: var(--form-text-color, #101010);
+  padding-right: 3rem;
   background-image: linear-gradient(to right bottom, currentColor 50%, transparent 50%), linear-gradient(to left bottom, currentColor 50%, transparent 50%);
   background-repeat: no-repeat;
   background-position: top 50% right 1rem, top 50% right calc(1.3rem - 1px);
@@ -13331,23 +13330,21 @@ fieldset legend {
 .input select::placeholder, .input-field select::placeholder {
   color: var(--form-text-color-placeholder, var(--form-text-color, #101010));
   opacity: 0.5;
-  transition: filter 0.3s;
+  transition: opacity 0.3s;
 }
 .input select:focus, .input-field select:focus {
+  background: var(--form-body-focus, var(--form-body, var(--color-light, #ffffff)));
   color: var(--form-text-color-focus, var(--form-text-color, #101010));
   border-color: var(--form-border-focus, var(--color-dark, #1eb3e0));
   outline: var(--outline-focus, var(--form-outline-focus));
 }
 .input select:focus::placeholder, .input select:focus:hover::placeholder, .input-field select:focus::placeholder, .input-field select:focus:hover::placeholder {
-  filter: blur(5px);
+  opacity: 0;
 }
 .input select:hover, .input-field select:hover {
+  background: var(--form-body-hover, var(--form-body, var(--color-light, #ffffff)));
   color: var(--form-text-color-hover, var(--form-text-color, #101010));
   border-color: var(--form-border-color, var(--color-dark, rgba(16, 16, 16, 0.5)));
-}
-.input select:hover::placeholder, .input-field select:hover::placeholder {
-  color: rgba(16, 16, 16, 0.2);
-  filter: blur(0px);
 }
 .input select:hover, .input-field select:hover {
   animation: selectArrow 0.3s forwards;
@@ -14241,23 +14238,21 @@ input.hidden + label::before, input.hidden + label::after {
 .input-field input[type=text]::placeholder, .input-field input[type=date]::placeholder, .input-field input[type=datetime-local]::placeholder, .input-field input[type=month]::placeholder, .input-field input[type=time]::placeholder, .input-field input[type=week]::placeholder, .input-field input[type=search]::placeholder, .input-field input[type=email]::placeholder, .input-field input[type=tel]::placeholder, .input-field input[type=number]::placeholder, .input-field input[type=password]::placeholder, .input-field input[type=url]::placeholder {
   color: var(--form-text-color-placeholder, var(--form-text-color, #101010));
   opacity: 0.5;
-  transition: filter 0.3s;
+  transition: opacity 0.3s;
 }
 .input-field input[type=text]:focus, .input-field input[type=date]:focus, .input-field input[type=datetime-local]:focus, .input-field input[type=month]:focus, .input-field input[type=time]:focus, .input-field input[type=week]:focus, .input-field input[type=search]:focus, .input-field input[type=email]:focus, .input-field input[type=tel]:focus, .input-field input[type=number]:focus, .input-field input[type=password]:focus, .input-field input[type=url]:focus {
+  background: var(--form-body-focus, var(--form-body, var(--color-light, #ffffff)));
   color: var(--form-text-color-focus, var(--form-text-color, #101010));
   border-color: var(--form-border-focus, var(--color-dark, #1eb3e0));
   outline: var(--outline-focus, var(--form-outline-focus));
 }
 .input-field input[type=text]:focus::placeholder, .input-field input[type=text]:focus:hover::placeholder, .input-field input[type=date]:focus::placeholder, .input-field input[type=date]:focus:hover::placeholder, .input-field input[type=datetime-local]:focus::placeholder, .input-field input[type=datetime-local]:focus:hover::placeholder, .input-field input[type=month]:focus::placeholder, .input-field input[type=month]:focus:hover::placeholder, .input-field input[type=time]:focus::placeholder, .input-field input[type=time]:focus:hover::placeholder, .input-field input[type=week]:focus::placeholder, .input-field input[type=week]:focus:hover::placeholder, .input-field input[type=search]:focus::placeholder, .input-field input[type=search]:focus:hover::placeholder, .input-field input[type=email]:focus::placeholder, .input-field input[type=email]:focus:hover::placeholder, .input-field input[type=tel]:focus::placeholder, .input-field input[type=tel]:focus:hover::placeholder, .input-field input[type=number]:focus::placeholder, .input-field input[type=number]:focus:hover::placeholder, .input-field input[type=password]:focus::placeholder, .input-field input[type=password]:focus:hover::placeholder, .input-field input[type=url]:focus::placeholder, .input-field input[type=url]:focus:hover::placeholder {
-  filter: blur(5px);
+  opacity: 0;
 }
 .input-field input[type=text]:hover, .input-field input[type=date]:hover, .input-field input[type=datetime-local]:hover, .input-field input[type=month]:hover, .input-field input[type=time]:hover, .input-field input[type=week]:hover, .input-field input[type=search]:hover, .input-field input[type=email]:hover, .input-field input[type=tel]:hover, .input-field input[type=number]:hover, .input-field input[type=password]:hover, .input-field input[type=url]:hover {
+  background: var(--form-body-hover, var(--form-body, var(--color-light, #ffffff)));
   color: var(--form-text-color-hover, var(--form-text-color, #101010));
   border-color: var(--form-border-color, var(--color-dark, rgba(16, 16, 16, 0.5)));
-}
-.input-field input[type=text]:hover::placeholder, .input-field input[type=date]:hover::placeholder, .input-field input[type=datetime-local]:hover::placeholder, .input-field input[type=month]:hover::placeholder, .input-field input[type=time]:hover::placeholder, .input-field input[type=week]:hover::placeholder, .input-field input[type=search]:hover::placeholder, .input-field input[type=email]:hover::placeholder, .input-field input[type=tel]:hover::placeholder, .input-field input[type=number]:hover::placeholder, .input-field input[type=password]:hover::placeholder, .input-field input[type=url]:hover::placeholder {
-  color: rgba(16, 16, 16, 0.2);
-  filter: blur(0px);
 }
 .input-field .input--ghost input[type=text], .input-field .input--ghost input[type=email], .input-field .input--ghost input[type=tel], .input-field .input--ghost input[type=number], .input-field .input--ghost input[type=password], .input-field .input--ghost input[type=url], .input-field .input--naked input[type=text], .input-field .input--naked input[type=email], .input-field .input--naked input[type=tel], .input-field .input--naked input[type=number], .input-field .input--naked input[type=password], .input-field .input--naked input[type=url] {
   background-color: transparent;
