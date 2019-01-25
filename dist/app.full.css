@@ -13427,6 +13427,7 @@ input[type=submit]:not(.button):not([class^=button-icon]):active {
 .input-range [type=range] {
   background: transparent;
   -webkit-appearance: none;
+  padding: var(--range-padding, var(--form-input-padding, 0.75rem));
 }
 .input-range [type=range]:focus {
   outline: none;
@@ -13984,6 +13985,8 @@ input[type=submit]:not(.button):not([class^=button-icon]):active {
 
 .input-switch input[type=checkbox] + label::before {
   box-shadow: 0 0 0 1px var(--form-border-color, var(--color-dark, rgba(16, 16, 16, 0.25))) inset;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .input-switch input[type=checkbox] + label::after {
@@ -13992,6 +13995,8 @@ input[type=submit]:not(.button):not([class^=button-icon]):active {
   background-color: var(--form-border-color, var(--color-dark, rgba(16, 16, 16, 0.25)));
   transform: none;
   opacity: 1;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .input-switch input[type=checkbox]:checked + label::after {
