@@ -13247,35 +13247,37 @@ fieldset legend {
 }
 
 .input textarea, .input-field textarea {
-  min-width: 10rem;
   max-width: 100%;
-  border-width: var(--border-width, var(--form-border-width, 1px));
+  border-width: var(--form-border-width, var(--border-width, 1px));
   border-style: solid;
-  border-color: var(--color-dark, var(--form-border, rgba(16, 16, 16, 0.25)));
-  border-radius: var(--border-radius, var(--form-border-radius, 2px));
-  background: white;
+  border-color: var(--form-border-color, var(--color-dark, rgba(16, 16, 16, 0.25)));
+  border-radius: var(--form-border-radius, var(--border-radius, 2px));
+  background: var(--form-body, var(--color-light, #ffffff));
   font-size: 1rem;
   font-family: inherit;
   line-height: var(--form-input-line-height, 1rem);
   -webkit-appearance: none;
   padding: var(--form-input-padding, 0.75rem);
+  color: var(--form-text-color, #101010);
   min-height: 5rem;
   resize: none;
 }
 .input textarea::placeholder, .input-field textarea::placeholder {
-  color: rgba(16, 16, 16, 0.1);
+  color: var(--form-text-color-placeholder, var(--form-text-color, #101010));
   opacity: 1;
   transition: filter 0.3s;
 }
 .input textarea:focus, .input-field textarea:focus {
-  border-color: var(--color-dark, var(--form-border-focus, #1eb3e0));
+  color: var(--form-text-color-focus, var(--form-text-color, #101010));
+  border-color: var(--form-border-focus, var(--color-dark, #1eb3e0));
   outline: var(--outline-focus, var(--form-outline-focus));
 }
 .input textarea:focus::placeholder, .input textarea:focus:hover::placeholder, .input-field textarea:focus::placeholder, .input-field textarea:focus:hover::placeholder {
   filter: blur(5px);
 }
 .input textarea:hover, .input-field textarea:hover {
-  border-color: var(--color-dark, var(--form-border-hover, rgba(16, 16, 16, 0.5)));
+  color: var(--form-text-color-hover, var(--form-text-color, #101010));
+  border-color: var(--form-border-color, var(--color-dark, rgba(16, 16, 16, 0.5)));
 }
 .input textarea:hover::placeholder, .input-field textarea:hover::placeholder {
   color: rgba(16, 16, 16, 0.2);
@@ -13308,18 +13310,18 @@ fieldset legend {
   }
 }
 .input select, .input-field select {
-  min-width: 10rem;
   max-width: 100%;
-  border-width: var(--border-width, var(--form-border-width, 1px));
+  border-width: var(--form-border-width, var(--border-width, 1px));
   border-style: solid;
-  border-color: var(--color-dark, var(--form-border, rgba(16, 16, 16, 0.25)));
-  border-radius: var(--border-radius, var(--form-border-radius, 2px));
-  background: white;
+  border-color: var(--form-border-color, var(--color-dark, rgba(16, 16, 16, 0.25)));
+  border-radius: var(--form-border-radius, var(--border-radius, 2px));
+  background: var(--form-body, var(--color-light, #ffffff));
   font-size: 1rem;
   font-family: inherit;
   line-height: var(--form-input-line-height, 1rem);
   -webkit-appearance: none;
   padding: var(--form-input-padding, 0.75rem);
+  color: var(--form-text-color, #101010);
   min-width: 12rem;
   background-image: linear-gradient(to right bottom, rgba(16, 16, 16, 0.2) 50%, transparent 50%), linear-gradient(to left bottom, rgba(16, 16, 16, 0.2) 50%, transparent 50%);
   background-repeat: no-repeat;
@@ -13328,19 +13330,21 @@ fieldset legend {
   -webkit-appearance: none;
 }
 .input select::placeholder, .input-field select::placeholder {
-  color: rgba(16, 16, 16, 0.1);
+  color: var(--form-text-color-placeholder, var(--form-text-color, #101010));
   opacity: 1;
   transition: filter 0.3s;
 }
 .input select:focus, .input-field select:focus {
-  border-color: var(--color-dark, var(--form-border-focus, #1eb3e0));
+  color: var(--form-text-color-focus, var(--form-text-color, #101010));
+  border-color: var(--form-border-focus, var(--color-dark, #1eb3e0));
   outline: var(--outline-focus, var(--form-outline-focus));
 }
 .input select:focus::placeholder, .input select:focus:hover::placeholder, .input-field select:focus::placeholder, .input-field select:focus:hover::placeholder {
   filter: blur(5px);
 }
 .input select:hover, .input-field select:hover {
-  border-color: var(--color-dark, var(--form-border-hover, rgba(16, 16, 16, 0.5)));
+  color: var(--form-text-color-hover, var(--form-text-color, #101010));
+  border-color: var(--form-border-color, var(--color-dark, rgba(16, 16, 16, 0.5)));
 }
 .input select:hover::placeholder, .input-field select:hover::placeholder {
   color: rgba(16, 16, 16, 0.2);
@@ -13372,9 +13376,7 @@ label {
   padding-left: 0;
   margin-right: 1rem;
   padding: var(--form-input-padding, 0.75rem);
-}
-form label:hover + input, form label:hover + textarea, form label:hover + select {
-  background-color: #f7f7f7;
+  color: var(--form-label-color, inherit);
 }
 
 input[type=button]:not(.button):not([class^=button-icon]),
@@ -13437,40 +13439,40 @@ input[type=submit]:not(.button):not([class^=button-icon]):active {
   width: 100%;
   height: 0.5rem;
   border-radius: 25px;
-  background-color: var(--range-track-background, var(--color-dark, var(--form-border, rgba(16, 16, 16, 0.25))));
+  background-color: var(--range-track-background, var(--form-border-color, var(--color-dark, rgba(16, 16, 16, 0.25))));
   animation-timing-function: 0.2s;
   cursor: pointer;
 }
 .input-range [type=range]:focus::-webkit-slider-runnable-track {
-  background-color: var(--range-track-focus-background, var(--color-primary, var(--form-accent, #1eb3e0)));
+  background-color: var(--range-track-focus-background, var(--form-accent, var(--color-primary, #1eb3e0)));
 }
 .input-range [type=range]::-webkit-slider-thumb {
   width: 1rem;
   height: 1rem;
-  border: var(--border-width, var(--form-border-width, 1px)) solid var(--color-dark, var(--form-border, rgba(16, 16, 16, 0.25)));
+  border: var(--form-border-width, var(--border-width, 1px)) solid var(--form-border-color, var(--color-dark, rgba(16, 16, 16, 0.25)));
   border-radius: 50%;
-  background: var(--range-thumb-background, var(--color-light, var(--form-body, #ffffff)));
+  background: var(--range-thumb-background, var(--form-body, var(--color-light, #ffffff)));
   -webkit-appearance: none;
   cursor: pointer;
   margin-top: -3.6px;
 }
 .input-range [type=range]:focus::-webkit-slider-runnable-track {
-  background-color: var(--range-track-focus-background, var(--color-primary, var(--form-accent, #1eb3e0)));
+  background-color: var(--range-track-focus-background, var(--form-accent, var(--color-primary, #1eb3e0)));
 }
 .input-range [type=range]::-moz-range-track {
   width: 100%;
   height: 0.5rem;
   border-radius: 25px;
-  background-color: var(--range-track-background, var(--color-dark, var(--form-border, rgba(16, 16, 16, 0.25))));
+  background-color: var(--range-track-background, var(--form-border-color, var(--color-dark, rgba(16, 16, 16, 0.25))));
   animation-timing-function: 0.2s;
   cursor: pointer;
 }
 .input-range [type=range]::-moz-range-thumb {
   width: 1rem;
   height: 1rem;
-  border: var(--border-width, var(--form-border-width, 1px)) solid var(--color-dark, var(--form-border, rgba(16, 16, 16, 0.25)));
+  border: var(--form-border-width, var(--border-width, 1px)) solid var(--form-border-color, var(--color-dark, rgba(16, 16, 16, 0.25)));
   border-radius: 50%;
-  background: var(--range-thumb-background, var(--color-light, var(--form-body, #ffffff)));
+  background: var(--range-thumb-background, var(--form-body, var(--color-light, #ffffff)));
   cursor: pointer;
 }
 .input-range [type=range]::-ms-track {
@@ -13478,7 +13480,7 @@ input[type=submit]:not(.button):not([class^=button-icon]):active {
   height: 0.5rem;
   border-width: 1rem 0;
   border-color: transparent;
-  background-color: var(--range-track-background, var(--color-dark, var(--form-border, rgba(16, 16, 16, 0.25))));
+  background-color: var(--range-track-background, var(--form-border-color, var(--color-dark, rgba(16, 16, 16, 0.25))));
   color: transparent;
   animation-timing-function: 0.2s;
   cursor: pointer;
@@ -13496,16 +13498,16 @@ input[type=submit]:not(.button):not([class^=button-icon]):active {
 .input-range [type=range]::-ms-thumb {
   width: 1rem;
   height: 1rem;
-  border: var(--border-width, var(--form-border-width, 1px)) solid var(--color-dark, var(--form-border, rgba(16, 16, 16, 0.25)));
+  border: var(--form-border-width, var(--border-width, 1px)) solid var(--form-border-color, var(--color-dark, rgba(16, 16, 16, 0.25)));
   border-radius: 50%;
-  background: var(--range-thumb-background, var(--color-light, var(--form-body, #ffffff)));
+  background: var(--range-thumb-background, var(--form-body, var(--color-light, #ffffff)));
   cursor: pointer;
 }
 .input-range [type=range]:focus::-ms-fill-lower {
-  background-color: var(--range-track-focus-background, var(--color-primary, var(--form-accent, #1eb3e0)));
+  background-color: var(--range-track-focus-background, var(--form-accent, var(--color-primary, #1eb3e0)));
 }
 .input-range [type=range]:focus::-ms-fill-upper {
-  background-color: var(--range-track-focus-background, var(--color-primary, var(--form-accent, #1eb3e0)));
+  background-color: var(--range-track-focus-background, var(--form-accent, var(--color-primary, #1eb3e0)));
 }
 .input-range + label {
   margin-left: 1rem;
@@ -13542,7 +13544,7 @@ input[type=submit]:not(.button):not([class^=button-icon]):active {
 }
 .input-check-color input[type=checkbox]:focus label::before,
 .input-check-color input[type=radio]:focus label::before {
-  box-shadow: 0 2px 0 0 var(--color-primary, var(--form-accent, #1eb3e0));
+  box-shadow: 0 2px 0 0 var(--form-accent, var(--color-primary, #1eb3e0));
 }
 .input-check-color label::before {
   position: absolute;
@@ -13551,9 +13553,9 @@ input[type=submit]:not(.button):not([class^=button-icon]):active {
   display: block;
   width: 1.5em;
   height: 1.5em;
-  box-shadow: 0 2px 0 0 var(--color-shadow, var(--form-shadow, #101010));
+  box-shadow: 0 2px 0 0 var(--form-shadow, var(--color-shadow, #101010));
   border-radius: 50%;
-  background-color: var(--color-primary, var(--form-accent, #1eb3e0));
+  background-color: var(--form-accent, var(--color-primary, #1eb3e0));
 }
 .input-check-color label::after {
   position: absolute;
@@ -13563,7 +13565,7 @@ input[type=submit]:not(.button):not([class^=button-icon]):active {
   width: 0.5em;
   height: 0.5em;
   border-radius: 50%;
-  background-color: var(--color-light, var(--form-body, #ffffff));
+  background-color: var(--form-body, var(--color-light, #ffffff));
   transform: scale(0);
 }
 .input-check-color input:checked + label::after {
@@ -13902,7 +13904,7 @@ input[type=submit]:not(.button):not([class^=button-icon]):active {
   display: inline-block;
   width: auto;
   min-width: 2.5em;
-  box-shadow: 0 0 0 1px var(--color-shadow, var(--form-shadow, #101010));
+  box-shadow: 0 0 0 1px var(--form-shadow, var(--color-shadow, #101010));
   border-radius: 3px;
   line-height: 2.5em;
   text-align: center;
@@ -13963,7 +13965,7 @@ input[type=submit]:not(.button):not([class^=button-icon]):active {
   display: block;
   width: 2.5rem;
   height: 1.5rem;
-  background: var(--color-light, var(--form-body, #ffffff));
+  background: var(--form-body, var(--color-light, #ffffff));
   border-radius: 0.75rem;
 }
 .input-switch input[type=checkbox] + label::after {
@@ -13975,7 +13977,7 @@ input[type=submit]:not(.button):not([class^=button-icon]):active {
   width: 2rem;
   height: 2rem;
   border-radius: 0.75rem;
-  background: var(--color-primary, var(--form-accent, #1eb3e0));
+  background: var(--form-accent, var(--color-primary, #1eb3e0));
   opacity: 0;
   transition: 0.3s;
 }
@@ -13985,20 +13987,20 @@ input[type=submit]:not(.button):not([class^=button-icon]):active {
 }
 
 .input-switch input[type=checkbox] + label::before {
-  box-shadow: 0 0 0 1px var(--color-dark, var(--form-border, rgba(16, 16, 16, 0.25))) inset;
+  box-shadow: 0 0 0 1px var(--form-border-color, var(--color-dark, rgba(16, 16, 16, 0.25))) inset;
 }
 
 .input-switch input[type=checkbox] + label::after {
   width: 1rem;
   height: 1rem;
-  background-color: var(--color-dark, var(--form-border, rgba(16, 16, 16, 0.25)));
+  background-color: var(--form-border-color, var(--color-dark, rgba(16, 16, 16, 0.25)));
   transform: none;
   opacity: 1;
 }
 
 .input-switch input[type=checkbox]:checked + label::after {
   left: 1.25rem;
-  background-color: var(--color-primary, var(--form-accent, #1eb3e0));
+  background-color: var(--form-accent, var(--color-primary, #1eb3e0));
   opacity: 1;
 }
 
@@ -14057,7 +14059,7 @@ input[type=submit]:not(.button):not([class^=button-icon]):active {
   display: block;
   width: 1rem;
   height: 1rem;
-  background: var(--color-light, var(--form-body, #ffffff));
+  background: var(--form-body, var(--color-light, #ffffff));
   border-radius: 0%;
 }
 .input-checkbox input[type=checkbox] + label::after {
@@ -14069,7 +14071,7 @@ input[type=submit]:not(.button):not([class^=button-icon]):active {
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 0%;
-  background: var(--color-primary, var(--form-accent, #1eb3e0));
+  background: var(--form-accent, var(--color-primary, #1eb3e0));
   opacity: 0;
   transition: 0.3s;
 }
@@ -14080,8 +14082,8 @@ input[type=submit]:not(.button):not([class^=button-icon]):active {
 
 .input-checkbox input[type=checkbox] + label::before {
   top: 50%;
-  box-shadow: 0 0 0 var(--border-width, var(--form-border-width, 1px)) var(--color-dark, var(--form-border, rgba(16, 16, 16, 0.25))) inset;
-  border-radius: var(--border-radius, var(--form-border-radius, 2px));
+  box-shadow: 0 0 0 var(--form-border-width, var(--border-width, 1px)) var(--form-border-color, var(--color-dark, rgba(16, 16, 16, 0.25))) inset;
+  border-radius: var(--form-border-radius, var(--border-radius, 2px));
   transform: translateY(-50%);
 }
 
@@ -14111,8 +14113,8 @@ input[type=submit]:not(.button):not([class^=button-icon]):active {
 .input-checkbox label[for] + input[type=checkbox] {
   width: 1rem;
   height: 1rem;
-  border: var(--border-width, var(--form-border-width, 1px)) solid var(--color-dark, var(--form-border, rgba(16, 16, 16, 0.25)));
-  border-radius: var(--border-radius, var(--form-border-radius, 2px));
+  border: var(--form-border-width, var(--border-width, 1px)) solid var(--form-border-color, var(--color-dark, rgba(16, 16, 16, 0.25)));
+  border-radius: var(--form-border-radius, var(--border-radius, 2px));
   opacity: 1;
   -webkit-appearance: checkbox;
   -moz-appearance: checkbox;
@@ -14161,7 +14163,7 @@ input[type=submit]:not(.button):not([class^=button-icon]):active {
   display: block;
   width: 1rem;
   height: 1rem;
-  background: var(--color-light, var(--form-body, #ffffff));
+  background: var(--form-body, var(--color-light, #ffffff));
   border-radius: 100%;
 }
 .input-radio input[type=radio] + label::after {
@@ -14173,7 +14175,7 @@ input[type=submit]:not(.button):not([class^=button-icon]):active {
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 100%;
-  background: var(--color-primary, var(--form-accent, #1eb3e0));
+  background: var(--form-accent, var(--color-primary, #1eb3e0));
   opacity: 0;
   transition: 0.3s;
 }
@@ -14184,7 +14186,7 @@ input[type=submit]:not(.button):not([class^=button-icon]):active {
 
 .input-radio input[type=radio] + label::before {
   top: 50%;
-  box-shadow: 0 0 0 var(--border-width, var(--form-border-width, 1px)) var(--color-dark, var(--form-border, rgba(16, 16, 16, 0.25))) inset;
+  box-shadow: 0 0 0 var(--form-border-width, var(--border-width, 1px)) var(--form-border-color, var(--color-dark, rgba(16, 16, 16, 0.25))) inset;
   transform: translateY(-50%);
 }
 
@@ -14205,7 +14207,7 @@ input[type=submit]:not(.button):not([class^=button-icon]):active {
 label[for] + input[type=radio] {
   width: 1rem;
   height: 1rem;
-  border: var(--border-width, var(--form-border-width, 1px)) solid var(--color-dark, var(--form-border, rgba(16, 16, 16, 0.25)));
+  border: var(--form-border-width, var(--border-width, 1px)) solid var(--form-border-color, var(--color-dark, rgba(16, 16, 16, 0.25)));
   border-radius: 50%;
   opacity: 1;
   -webkit-appearance: radio;
@@ -14224,33 +14226,35 @@ input.hidden + label::before, input.hidden + label::after {
 }
 
 .input-field input[type=text], .input-field input[type=date], .input-field input[type=datetime-local], .input-field input[type=month], .input-field input[type=time], .input-field input[type=week], .input-field input[type=search], .input-field input[type=email], .input-field input[type=tel], .input-field input[type=number], .input-field input[type=password], .input-field input[type=url] {
-  min-width: 10rem;
   max-width: 100%;
-  border-width: var(--border-width, var(--form-border-width, 1px));
+  border-width: var(--form-border-width, var(--border-width, 1px));
   border-style: solid;
-  border-color: var(--color-dark, var(--form-border, rgba(16, 16, 16, 0.25)));
-  border-radius: var(--border-radius, var(--form-border-radius, 2px));
-  background: white;
+  border-color: var(--form-border-color, var(--color-dark, rgba(16, 16, 16, 0.25)));
+  border-radius: var(--form-border-radius, var(--border-radius, 2px));
+  background: var(--form-body, var(--color-light, #ffffff));
   font-size: 1rem;
   font-family: inherit;
   line-height: var(--form-input-line-height, 1rem);
   -webkit-appearance: none;
   padding: var(--form-input-padding, 0.75rem);
+  color: var(--form-text-color, #101010);
 }
 .input-field input[type=text]::placeholder, .input-field input[type=date]::placeholder, .input-field input[type=datetime-local]::placeholder, .input-field input[type=month]::placeholder, .input-field input[type=time]::placeholder, .input-field input[type=week]::placeholder, .input-field input[type=search]::placeholder, .input-field input[type=email]::placeholder, .input-field input[type=tel]::placeholder, .input-field input[type=number]::placeholder, .input-field input[type=password]::placeholder, .input-field input[type=url]::placeholder {
-  color: rgba(16, 16, 16, 0.1);
+  color: var(--form-text-color-placeholder, var(--form-text-color, #101010));
   opacity: 1;
   transition: filter 0.3s;
 }
 .input-field input[type=text]:focus, .input-field input[type=date]:focus, .input-field input[type=datetime-local]:focus, .input-field input[type=month]:focus, .input-field input[type=time]:focus, .input-field input[type=week]:focus, .input-field input[type=search]:focus, .input-field input[type=email]:focus, .input-field input[type=tel]:focus, .input-field input[type=number]:focus, .input-field input[type=password]:focus, .input-field input[type=url]:focus {
-  border-color: var(--color-dark, var(--form-border-focus, #1eb3e0));
+  color: var(--form-text-color-focus, var(--form-text-color, #101010));
+  border-color: var(--form-border-focus, var(--color-dark, #1eb3e0));
   outline: var(--outline-focus, var(--form-outline-focus));
 }
 .input-field input[type=text]:focus::placeholder, .input-field input[type=text]:focus:hover::placeholder, .input-field input[type=date]:focus::placeholder, .input-field input[type=date]:focus:hover::placeholder, .input-field input[type=datetime-local]:focus::placeholder, .input-field input[type=datetime-local]:focus:hover::placeholder, .input-field input[type=month]:focus::placeholder, .input-field input[type=month]:focus:hover::placeholder, .input-field input[type=time]:focus::placeholder, .input-field input[type=time]:focus:hover::placeholder, .input-field input[type=week]:focus::placeholder, .input-field input[type=week]:focus:hover::placeholder, .input-field input[type=search]:focus::placeholder, .input-field input[type=search]:focus:hover::placeholder, .input-field input[type=email]:focus::placeholder, .input-field input[type=email]:focus:hover::placeholder, .input-field input[type=tel]:focus::placeholder, .input-field input[type=tel]:focus:hover::placeholder, .input-field input[type=number]:focus::placeholder, .input-field input[type=number]:focus:hover::placeholder, .input-field input[type=password]:focus::placeholder, .input-field input[type=password]:focus:hover::placeholder, .input-field input[type=url]:focus::placeholder, .input-field input[type=url]:focus:hover::placeholder {
   filter: blur(5px);
 }
 .input-field input[type=text]:hover, .input-field input[type=date]:hover, .input-field input[type=datetime-local]:hover, .input-field input[type=month]:hover, .input-field input[type=time]:hover, .input-field input[type=week]:hover, .input-field input[type=search]:hover, .input-field input[type=email]:hover, .input-field input[type=tel]:hover, .input-field input[type=number]:hover, .input-field input[type=password]:hover, .input-field input[type=url]:hover {
-  border-color: var(--color-dark, var(--form-border-hover, rgba(16, 16, 16, 0.5)));
+  color: var(--form-text-color-hover, var(--form-text-color, #101010));
+  border-color: var(--form-border-color, var(--color-dark, rgba(16, 16, 16, 0.5)));
 }
 .input-field input[type=text]:hover::placeholder, .input-field input[type=date]:hover::placeholder, .input-field input[type=datetime-local]:hover::placeholder, .input-field input[type=month]:hover::placeholder, .input-field input[type=time]:hover::placeholder, .input-field input[type=week]:hover::placeholder, .input-field input[type=search]:hover::placeholder, .input-field input[type=email]:hover::placeholder, .input-field input[type=tel]:hover::placeholder, .input-field input[type=number]:hover::placeholder, .input-field input[type=password]:hover::placeholder, .input-field input[type=url]:hover::placeholder {
   color: rgba(16, 16, 16, 0.2);
@@ -14375,9 +14379,7 @@ input.hidden + label::before, input.hidden + label::after {
   padding-left: 0;
   margin-right: 1rem;
   padding: var(--form-input-padding, 0.75rem);
-}
-form .input-field label label:hover + input, form .input-field label label:hover + textarea, form .input-field label label:hover + select {
-  background-color: #f7f7f7;
+  color: var(--form-label-color, inherit);
 }
 
 .anim-transform {
