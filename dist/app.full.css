@@ -13264,7 +13264,7 @@ fieldset legend {
 }
 .input textarea::placeholder, .input-field textarea::placeholder {
   color: var(--form-text-color-placeholder, var(--form-text-color, #101010));
-  opacity: 1;
+  opacity: 0.5;
   transition: filter 0.3s;
 }
 .input textarea:focus, .input-field textarea:focus {
@@ -13322,8 +13322,7 @@ fieldset legend {
   -webkit-appearance: none;
   padding: var(--form-input-padding, 0.75rem);
   color: var(--form-text-color, #101010);
-  min-width: 12rem;
-  background-image: linear-gradient(to right bottom, rgba(16, 16, 16, 0.2) 50%, transparent 50%), linear-gradient(to left bottom, rgba(16, 16, 16, 0.2) 50%, transparent 50%);
+  background-image: linear-gradient(to right bottom, currentColor 50%, transparent 50%), linear-gradient(to left bottom, currentColor 50%, transparent 50%);
   background-repeat: no-repeat;
   background-position: top 50% right 1rem, top 50% right calc(1.3rem - 1px);
   background-size: 0.3rem 0.3rem, 0.3rem 0.3rem;
@@ -13331,7 +13330,7 @@ fieldset legend {
 }
 .input select::placeholder, .input-field select::placeholder {
   color: var(--form-text-color-placeholder, var(--form-text-color, #101010));
-  opacity: 1;
+  opacity: 0.5;
   transition: filter 0.3s;
 }
 .input select:focus, .input-field select:focus {
@@ -13359,7 +13358,7 @@ fieldset legend {
   padding: 0;
 }
 .input select[size]:not([size="1"]) option, .input-field select[size]:not([size="1"]) option {
-  border-bottom: 1px solid rgba(16, 16, 16, 0.1);
+  border-bottom: 1px solid currentColor;
   line-height: 2;
   padding: 0.75rem;
 }
@@ -14241,7 +14240,7 @@ input.hidden + label::before, input.hidden + label::after {
 }
 .input-field input[type=text]::placeholder, .input-field input[type=date]::placeholder, .input-field input[type=datetime-local]::placeholder, .input-field input[type=month]::placeholder, .input-field input[type=time]::placeholder, .input-field input[type=week]::placeholder, .input-field input[type=search]::placeholder, .input-field input[type=email]::placeholder, .input-field input[type=tel]::placeholder, .input-field input[type=number]::placeholder, .input-field input[type=password]::placeholder, .input-field input[type=url]::placeholder {
   color: var(--form-text-color-placeholder, var(--form-text-color, #101010));
-  opacity: 1;
+  opacity: 0.5;
   transition: filter 0.3s;
 }
 .input-field input[type=text]:focus, .input-field input[type=date]:focus, .input-field input[type=datetime-local]:focus, .input-field input[type=month]:focus, .input-field input[type=time]:focus, .input-field input[type=week]:focus, .input-field input[type=search]:focus, .input-field input[type=email]:focus, .input-field input[type=tel]:focus, .input-field input[type=number]:focus, .input-field input[type=password]:focus, .input-field input[type=url]:focus {
@@ -20355,8 +20354,8 @@ body,
 html {
   min-width: 100%;
   min-height: 100%;
-  background-color: var(--color-body, --base-body, #ffffff);
-  color: var(--color-text, --base-text, #101010);
+  background-color: var(--color-body, var(--base-body, #ffffff));
+  color: var(--color-text, var(--base-text-color, #101010));
   font-family: "Helvetica", serif;
   margin: 0;
   padding: 0;
@@ -20370,7 +20369,7 @@ main.center {
   height: 100%;
 }
 main.center.dark {
-  background-color: var(--color-text, --base-color-text, #101010);
+  background-color: var(--color-text, var(--base-color-text, #101010));
   color: var(--color-body, --base-color-body, #ffffff);
 }
 

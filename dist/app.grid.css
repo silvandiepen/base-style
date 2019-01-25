@@ -1531,8 +1531,8 @@ body,
 html {
   min-width: 100%;
   min-height: 100%;
-  background-color: var(--color-body, --base-body, #ffffff);
-  color: var(--color-text, --base-text, #101010);
+  background-color: var(--color-body, var(--base-body, #ffffff));
+  color: var(--color-text, var(--base-text-color, #101010));
   font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   margin: 0;
   padding: 0;
@@ -1546,7 +1546,7 @@ main.center {
   height: 100%;
 }
 main.center.dark {
-  background-color: var(--color-text, --base-color-text, #101010);
+  background-color: var(--color-text, var(--base-color-text, #101010));
   color: var(--color-body, --base-color-body, #ffffff);
 }
 
