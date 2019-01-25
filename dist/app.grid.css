@@ -1,10 +1,10 @@
 .row {
-  max-width: 4096px;
-  width: 100%;
-  margin: auto;
   display: flex;
-  justify-content: flex-start;
   flex-flow: row wrap;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 4096px;
+  margin: auto;
 }
 .row.full > .column {
   width: 100%;
@@ -44,8 +44,8 @@
 }
 @media only screen and (min-width: 0px) {
   .small-0 > .column .row.small-0 > .column {
-    width: 0;
     display: none;
+    width: 0;
   }
   .row.small-full > .column {
     width: 100%;
@@ -194,8 +194,8 @@
 }
 @media only screen and (min-width: 751px) {
   .medium-0 > .column .row.medium-0 > .column {
-    width: 0;
     display: none;
+    width: 0;
   }
   .row.medium-full > .column {
     width: 100%;
@@ -344,8 +344,8 @@
 }
 @media only screen and (min-width: 961px) {
   .large-0 > .column .row.large-0 > .column {
-    width: 0;
     display: none;
+    width: 0;
   }
   .row.large-full > .column {
     width: 100%;
@@ -494,8 +494,8 @@
 }
 @media only screen and (min-width: 1281px) {
   .xlarge-0 > .column .row.xlarge-0 > .column {
-    width: 0;
     display: none;
+    width: 0;
   }
   .row.xlarge-full > .column {
     width: 100%;
@@ -643,12 +643,12 @@
   width: 83.3333333333%;
 }
 .row.center {
-  justify-items: center;
   justify-content: center;
+  justify-items: center;
 }
 .row.right {
-  justify-items: right;
   justify-content: flex-end;
+  justify-items: right;
 }
 @media only screen and (min-width: 0px) and (max-width: 9999px) {
   .row.small-reverse {
@@ -714,8 +714,8 @@
 }
 @media only screen and (min-width: 0px) {
   .small-0 .column.small-0 {
-    width: 0;
     display: none;
+    width: 0;
   }
   .column.small-full {
     width: 100%;
@@ -864,8 +864,8 @@
 }
 @media only screen and (min-width: 751px) {
   .medium-0 .column.medium-0 {
-    width: 0;
     display: none;
+    width: 0;
   }
   .column.medium-full {
     width: 100%;
@@ -1014,8 +1014,8 @@
 }
 @media only screen and (min-width: 961px) {
   .large-0 .column.large-0 {
-    width: 0;
     display: none;
+    width: 0;
   }
   .column.large-full {
     width: 100%;
@@ -1164,8 +1164,8 @@
 }
 @media only screen and (min-width: 1281px) {
   .xlarge-0 .column.xlarge-0 {
-    width: 0;
     display: none;
+    width: 0;
   }
   .column.xlarge-full {
     width: 100%;
@@ -1494,10 +1494,10 @@ q {
   quotes: none;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
   content: "";
   content: none;
 }
@@ -1529,25 +1529,25 @@ hr {
 
 body,
 html {
+  min-width: 100%;
+  min-height: 100%;
+  background-color: var(--color-body, --base-body, #ffffff);
+  color: var(--color-text, --base-text, #101010);
   font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-  background-color: #f7f7f7;
-  color: #303030;
-  width: 100%;
-  height: 100%;
   margin: 0;
   padding: 0;
 }
 
 main.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 main.center.dark {
-  background-color: #303030;
-  color: white;
+  background-color: var(--color-text, --base-color-text, #101010);
+  color: var(--color-body, --base-color-body, #ffffff);
 }
 
 /*# sourceMappingURL=app.grid.css.map */
